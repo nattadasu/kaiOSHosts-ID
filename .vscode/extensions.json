@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "tommasov.hosts"
+  ],
+  "unwantedRecommendations": [
+    "foxundermoon.shell-format"
+  ]
+}

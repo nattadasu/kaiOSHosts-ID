@@ -1,0 +1,17 @@
+{
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": false,
+    "editor.rulers": [
+      100
+    ]
+  },
+  "cSpell.words": [
+    "Advan",
+    "bebasid",
+    "Hape",
+    "markdownlint",
+    "mengunduh",
+    "Unduhan"
+  ]
+}
