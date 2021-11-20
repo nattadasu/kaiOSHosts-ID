@@ -115,6 +115,7 @@ Untuk mulai mengunduh, silakan pilih salah satu opsi variasi:
   </tr>
 </tbody>
 </table>
+
 <!--
 ## 🏁 Memulai <a id= "getting_started"></a>
 
