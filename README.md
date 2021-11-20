@@ -18,6 +18,8 @@
 
 - [Tentang](#about)
 - [Memulai](#getting_started)
+- [Daftar Variasi Berkas](#lists)
+- [Catatan Kaki](#footnotes)
 <!--
 - [Deployment](#deployment)
 - [Usage](#usage)
@@ -32,24 +34,87 @@ Repo ini dibuat untuk membantu para pengguna KaiOS di Indonesia, terlebih penggu
 Advan Hape Online, dalam berselancar internet tanpa *diganggu* oleh iklan maupun
 [penyensoran pemerintah](https://www.jetorbit.com/blog/apa-itu-internet-positif-apakah-diperlukan/).
 
-Kami memanfaatkan daftar `hosts` dari [Energized](https://github.com/EnergizedProtection/block)
-untuk adblock berdasarkan alamat IPV4 dan IPV6 dan [bebasid](https://github.com/bebasid/bebasid)
-untuk *bypass* Internet Positif.
+Kami memanfaatkan daftar `hosts` dari [Energized][energized] untuk adblock berdasarkan alamat IPV4
+dan IPV6 dan [bebasid][bebasid] untuk *bypass* Internet Positif.
 
 Kami juga menyediakan versi terpisah untuk memblokir iklan dari [KaiAds][kaiads], <strong>akan
-tetapi versi ini dapat merusak beberapa fitur internal, seperti mengunduh atau memperbarui aplikasi</strong>.<sup><a href="#fn1">1</a></sup>
-Pengguna diharapkan waspada jika ingin menggunakan versi ini.
+tetapi versi ini dapat merusak beberapa fitur internal, seperti mengunduh atau memperbarui aplikasi
+</strong>.<sup><a href="#fn1">1</a></sup> Pengguna diharapkan waspada jika ingin menggunakan versi
+ini.
 
-## 🗒 Daftar Variasi Berkas
+Untuk keterangan lebih lanjut, berkas *image* cwm ini sudah diujicoba di Advan Hape Online.
+
+> Repo ini juga dapat digunakan bagi pengguna OS lainnya seperti Windows, Linux, BSD, macOS, hingga
+> Android (diperlukan *rooting*). Silakan baca [`USAGE.md`](USAGE.md) untuk mengetahui lebih lanjut.
+>
+> Resiko kerusakan (seperti situs tidak dapat memuat) ditanggung oleh pengguna tersendiri. Repo ini
+> hanya mencakup pengguna KaiOS/Android yang memiliki clockworkmod (cwm) terpasang di partisi
+> *`recovery`*.
+
+## 🗒 Daftar Variasi Berkas <a id = "lists"></a>
 
 Untuk mulai mengunduh, silakan pilih salah satu opsi variasi:
 
-|        Nama Paket         | Deskripsi                                                                       | Tautan Unduhan | Sumber                                                                                     |
-| :-----------------------: | :------------------------------------------------------------------------------ | :------------: | :----------------------------------------------------------------------------------------- |
-|          Adblock          | Cocok untuk hanya menghilangkan iklan browser                                   |      []()      | [Energized Basic][energized], [Regional][energized]                                        |
-|     Adblock + KaiAds      | Dapat menghilangkan iklan browser dan aplikasi                                  |      []()      | [Energized Basic][energized], [Regional][energized], [KaiAds][kaiads]                      |
-|     Adblock + Bypass      | Cocok untuk hanya menghilangkan iklan browser dan bypass Internet Positif       |      []()      | [Energized Basic][energized], [Regional][energized], [bebasid][bebasid]                    |
-| Adblock + Bypass + KaiAds | Dapat menghilangkan iklan browser dan aplikasi , juga *bypass* Internet Positif |      []()      | [Energized Basic][energized], [Regional][energized], [bebasid][bebasid] , [KaiAds][kaiads] |
+<table>
+<thead>
+  <tr>
+    <th style="font-weight:bold;text-align:center;vertical-align:center;" rowspan="2">Nama Paket</th>
+    <th style="font-weight:bold;text-align:center;vertical-align:center;" rowspan="2">Deskripsi</th>
+    <th style="font-weight:bold;text-align:center;vertical-align:center;" colspan="2">Tautan Unduhan</th>
+    <th style="font-weight:bold;text-align:center;vertical-align:center;" rowspan="2">Sumber</th>
+  </tr>
+  <tr>
+    <th style="text-align:center;vertical-align:center;">ZIP CWM</th>
+    <th style="text-align:center;vertical-align:center;">RAW</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td style="text-align:right;vertical-align:center;">Adblock</td>
+    <td>Cocok untuk hanya menghilangkan iklan browser</td>
+    <td></td>
+    <td></td>
+    <td>
+      <a href="https://github.com/EnergizedProtection/block">Energized Basic</a>,
+      <a href="https://github.com/EnergizedProtection/block">Regional</a>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:right;vertical-align:center;">Adblock + KaiAds</td>
+    <td>Dapat menghilangkan iklan browser dan aplikasi</td>
+    <td></td>
+    <td></td>
+    <td>
+      <a href="https://github.com/EnergizedProtection/block">Energized Basic</a>,
+      <a href="https://github.com/EnergizedProtection/block">Regional</a>,
+      <a href="https://ivan-hc.github.io/bananahackers/ADBlock.html">KaiAds</a>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:right;vertical-align:center;">Adblock + Bypass</td>
+    <td>Cocok untuk hanya menghilangkan iklan browser dan bypass Internet Positif</td>
+    <td></td>
+    <td></td>
+    <td>
+      <a href="https://github.com/EnergizedProtection/block">Energized Basic</a>,
+      <a href="https://github.com/EnergizedProtection/block">Regional</a>,
+      <a href="https://github.com/bebasid/bebasid">bebasid</a>
+    </td>
+  </tr>
+  <tr>
+    <td style="text-align:right;vertical-align:center;">Adblock + Bypass + KaiAds</td>
+    <td>Dapat menghilangkan iklan browser dan aplikasi, juga bypass Internet Positif</td>
+    <td></td>
+    <td></td>
+    <td>
+      <a href="https://github.com/EnergizedProtection/block">Energized Basic</a>,
+      <a href="https://github.com/EnergizedProtection/block">Regional</a>,
+      <a href="https://github.com/bebasid/bebasid">bebasid</a>,
+      <a href="https://ivan-hc.github.io/bananahackers/ADBlock.html">KaiAds</a>
+    </td>
+  </tr>
+</tbody>
+</table>
 <!--
 ## 🏁 Memulai <a id= "getting_started"></a>
 
@@ -128,9 +193,10 @@ See also the list of [contributors](https://github.com/nattadasu/kaiOSHosts-ID/c
 - Inspiration
 - References
 -->
-## 👣 Catatan Kaki
 
-1. <a id= "fn1"></a> Lihat: [BananaHackers.net - Adblock][kaiads]
+## 👣 Catatan Kaki <a id="footnotes"></a>
+
+1. <a id= "fn1"></a> Baca: [BananaHackers.net - Adblock][kaiads]
 
 <!--Links-->
 [energized]: https://github.com/EnergizedProtection/block
