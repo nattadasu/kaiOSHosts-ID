@@ -285,9 +285,9 @@ Anda memerlukan:
 
 > **Catatan**:
 >
-> Anda juga dapat menggunakan langkah-langkah penerapan berkas host dari Linux. Mungkin Anda perlu
-> sedikit modifikasi dengan perintah agar sukses. Langkah-langkah tersebut bisa Anda baca di
-> [sini](#metode-perangkat-lunak-penyunting-teks).
+> Anda juga dapat menggunakan langkah-langkah penerapan berkas host dari Linux menggunakan GUI.
+> Mungkin Anda perlu sedikit modifikasi dengan perintah agar sukses. Langkah-langkah tersebut bisa
+> Anda baca di [sini](#metode-perangkat-lunak-penyunting-teks).
 >
 > Untuk itu silakan untuk membaca panduan dari distro masing-masing, karena adanya kemungkinan
 > perangkat lunak yang tertera di contoh tidak terpasang di sistem/tersedia di pengelola
@@ -315,9 +315,9 @@ Anda memerlukan:
 
 > **Catatan**:
 >
-> Anda juga dapat menggunakan langkah-langkah penerapan berkas host dari Linux. Mungkin Anda perlu
-> sedikit modifikasi dengan perintah agar sukses. Langkah-langkah tersebut bisa Anda baca di
-> [sini](#metode-perangkat-lunak-penyunting-teks).
+> Anda juga dapat menggunakan langkah-langkah penerapan berkas host dari Linux menggunakan GUI.
+> Mungkin Anda perlu sedikit modifikasi dengan perintah agar sukses. Langkah-langkah tersebut bisa
+> Anda baca di [sini](#metode-perangkat-lunak-penyunting-teks).
 >
 > Untuk itu silakan untuk membaca panduan dari Apple, karena adanya kemungkinan perangkat lunak yang
 > tertera di contoh tidak terpasang di sistem/didukung.
