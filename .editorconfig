@@ -6,7 +6,7 @@ indent_style = space
 insert_final_newline = false
 trim_trailing_whitespace = false
 
-[**.{json,md}]
+[**.{json,md,yaml}]
 indent_size = 2
 
 [hosts]

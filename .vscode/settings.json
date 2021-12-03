@@ -17,5 +17,8 @@
     "mengunduh",
     "Unduhan"
   ],
-  "markdown.extension.toc.updateOnSave": false
+  "markdown.extension.toc.updateOnSave": false,
+  "files.associations": {
+    ".txt": "hosts"
+  }
 }
