@@ -44,12 +44,12 @@ jobs:
       # Try to build
       - name: Building hosts file
         run: |
-          HEADER = "./src/header.txt"
-          BASIC = "./src/energizedBasic.txt"
-          REG = "./src/energizedRegional.txt"
-          KAIOS = "./src/kaios.txt"
-          BEBAS = "./src/bebasid.txt"
-          RAW = "./release/raw"
+          HEADER="./src/header.txt"
+          BASIC="./src/energizedBasic.txt"
+          REG="./src/energizedRegional.txt"
+          KAIOS="./src/kaios.txt"
+          BEBAS="./src/bebasid.txt"
+          RAW="./release/raw"
 
           cat $HEADER $BASIC $REG > $RAW/adblock/hosts
           cat $HEADER $BASIC $REG $KAIOS > $RAW/adblock-kai/hosts
@@ -60,9 +60,9 @@ jobs:
         run: |
           unset -v RAW
 
-          RAW = "./release/raw"
-          TMP = "./temp"
-          SYS = "system/etc/"
+          RAW="./release/raw"
+          TMP="./temp"
+          SYS="system/etc/"
 
           for CWM in ./src/cwm/*
           do
@@ -122,7 +122,7 @@ jobs:
         run: |
           unset -v RAW
           RAW= "./release/raw"
-          HOTXT = ".hosts.txt"
+          HOTXT=".hosts.txt"
 
           mv $RAW/clear/hosts $RAW/clear/clear$HOTXT
           mv $RAW/adblock/hosts $RAW/adblock/a$HOTXT
