@@ -89,36 +89,32 @@ jobs:
           cp $RAW/$AB-$BY-$KA/hosts $TMP/abk/$SYS
 
       - name: Archive `A` in ZIP
-        uses: thedoctor0/zip-release@master
+        uses: papeloto/action-zip@v1
         with:
-          type: zip
-          filename: adblock.zip
-          path: ./temp/a/
-          directory: ./release/zipcwm/
+          files: ./temp/a/
+          dest: ./release/zipcwm/adblock.zip
+          recursive: false
 
       - name: Archive `AK` in ZIP
-        uses: thedoctor0/zip-release@master
+        uses: papeloto/action-zip@v1
         with:
-          type: zip
-          filename: adblock-kaios.zip
-          path: ./temp/ak/
-          directory: ./release/zipcwm/
+          files: ./temp/ak/
+          dest: ./release/zipcwm/adblock-kaios.zip
+          recursive: false
 
       - name: Archive `AB` in ZIP
-        uses: thedoctor0/zip-release@master
+        uses: papeloto/action-zip@v1
         with:
-          type: zip
-          filename: adblock-bypass.zip
-          path: ./temp/ab/
-          directory: ./release/zipcwm/
+          files: ./temp/ab/
+          dest: ./release/zipcwm/adblock-bypass.zip
+          recursive: false
 
       - name: Archive `ABK` in ZIP
-        uses: thedoctor0/zip-release@master
+        uses: papeloto/action-zip@v1
         with:
-          type: zip
-          filename: adblock-bypass-kaios.zip
-          path: ./temp/abk/
-          directory: ./release/zipcwm/
+          files: ./temp/abk/
+          dest: ./release/zipcwm/adblock-bypass-kaios.zip
+          recursive: false
 
       # Try to commit
       - name: Prerelease Commit
