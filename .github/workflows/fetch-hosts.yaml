@@ -1,0 +1,151 @@
+name: Fetch Hosts from Providers
+on:
+  push:
+    tags:
+      - "release"
+      - "testing"
+  # Schedule for action to download latest files each 7 days
+  # schedule:
+  #  - cron: "0 0 */7 * *"
+
+jobs:
+  fetch:
+    name: Fetch hosts file and then try to release
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+
+      # Fetch data
+      - name: Download Energized (Basic) Host file
+        uses: wei/wget@v1
+        with:
+          args: -O src/energizedBasic.txt https://energized.pro/basic/formats/hosts
+
+      - name: Download Energized (Regional) Host file
+        uses: wei/wget@v1
+        with:
+          args: -O src/energizedRegional.txt https://energized.pro/extensions/regional/formats/hosts
+
+      - name: Download bebasid Host file
+        uses: wei/wget@v1
+        with:
+          args: -O src/bebasid.txt https://raw.githubusercontent.com/bebasid/bebasid/master/releases/hosts
+
+      - name: Commit Sources
+        run: |
+          git config --local user.email "nattadasu@users.noreply.github.com"
+          git config --local user.name "nattadasu"
+          git add .
+          git commit "🍱 Memperbarui berkas hosts"
+
+      # Try to build
+      - name: Building hosts file
+        run: |
+          HEADER = "src/header.txt"
+          BASIC = "src/energizedBasic.txt"
+          REG = "src/energizedRegional.txt"
+          KAIOS = "src/kaios.txt"
+          BEBAS = "src/bebasid.txt"
+          RAW = "release/raw"
+
+          cat $HEADER $BASIC $REG > $RAW/adblock/hosts
+          cat $HEADER $BASIC $REG $KAIOS > $RAW/adblock-kai/hosts
+          cat $HEADER $BASIC $REG $BEBAS > $RAW/adblock-bypass/hosts
+          cat $HEADER $BASIC $REG $BEBAS $KAIOS > $RAW/adblock-bypass-kaios/hosts
+
+      - name: Copy required files to temporary folder for cwm release
+        run: |
+          unset -v RAW
+
+          RAW = "release/raw"
+          TMP = "/temp"
+          SYS = "system/etc/"
+
+          for CWM in src/cwm/*
+          do
+            cp -R $CWM $TMP/
+          done
+
+          cp $RAW/a/hosts $TMP/a/$SYS
+          cp $RAW/ak/hosts $TMP/ak/$SYS
+          cp $RAW/ab/hosts $TMP/ab/$SYS
+          cp $RAW/abk/hosts $TMP/abk/$SYS
+
+      - name: Archive `A` in ZIP
+        uses: thedoctor0/zip-release@master
+        with:
+          type: zip
+          filename: adblock.zip
+          path: /temp/a/
+          directory: /release/zipcwm/
+
+      - name: Archive `AK` in ZIP
+        uses: thedoctor0/zip-release@master
+        with:
+          type: zip
+          filename: adblock-kaios.zip
+          path: /temp/ak/
+          directory: /release/zipcwm/
+
+      - name: Archive `AB` in ZIP
+        uses: thedoctor0/zip-release@master
+        with:
+          type: zip
+          filename: adblock-bypass.zip
+          path: /temp/ab/
+          directory: /release/zipcwm/
+
+      - name: Archive `ABK` in ZIP
+        uses: thedoctor0/zip-release@master
+        with:
+          type: zip
+          filename: adblock-bypass-kaios.zip
+          path: /temp/abk/
+          directory: /release/zipcwm/
+
+      # Try to commit
+      - name: Prerelease Commit
+        run: |
+          NOW=$( date -I )
+
+          git add .
+          git commit "📦 Rilis berkas - Edisi ${NOW}"
+          git push
+
+          echo "NOW=$NOW" >>$GITHUB_ENV
+
+      # Prerelease config
+      - name: Temporarily rename files
+        run: |
+          unset -v RAW
+          RAW= "release/raw"
+          HOTXT = ".hosts.txt"
+
+          mv $RAW/clear/hosts $RAW/clear/clear$HOTXT
+          mv $RAW/adblock/hosts $RAW/adblock/a$HOTXT
+          mv $RAW/adblock-kai/hosts $RAW/adblock-kai/ak$HOTXT
+          mv $RAW/adblock-bypass/hosts $RAW/adblock-bypass/ab$HOTXT
+          mv $RAW/adblock-bypass-kai/hosts $RAW/adblock-bypass-kai/abk$HOTXT
+
+      # Publish!
+      - name: Upload Release Asset
+        id: upload-release-asset
+        uses: marvinpinto/action-automatic-releases@v1.2.1
+        with:
+          files: |
+            release/raw/clear/clear.hosts.txt
+            release/raw/adblock/a.hosts.txt
+            release/raw/adblock-kai/ak.hosts.txt
+            release/raw/adblock-bypass/ab.hosts.txt
+            release/raw/adblock-bypass-kai/abk.hosts.txt
+            release/zipcwm/clear.zip
+            release/zipcwm/adblock.zip
+            release/zipcwm/adblock-kai.zip
+            release/zipcwm/adblock-bypass.zip
+            release/zipcwm/adblock-bypass-kai.zip
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          title: Rilis edisi ${{ env.NOW }}
+          prerelease: false
