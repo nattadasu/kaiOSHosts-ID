@@ -95,28 +95,28 @@ jobs:
       - name: Archive `A` in ZIP
         uses: papeloto/action-zip@v1
         with:
-          files: ./temp/a/
+          files: /temp/a/
           dest: ./release/zipcwm/adblock.zip
           recursive: false
 
       - name: Archive `AK` in ZIP
         uses: papeloto/action-zip@v1
         with:
-          files: ./temp/ak/
+          files: /temp/ak/
           dest: ./release/zipcwm/adblock-kaios.zip
           recursive: false
 
       - name: Archive `AB` in ZIP
         uses: papeloto/action-zip@v1
         with:
-          files: ./temp/ab/
+          files: /temp/ab/
           dest: ./release/zipcwm/adblock-bypass.zip
           recursive: false
 
       - name: Archive `ABK` in ZIP
         uses: papeloto/action-zip@v1
         with:
-          files: ./temp/abk/
+          files: /temp/abk/
           dest: ./release/zipcwm/adblock-bypass-kaios.zip
           recursive: false
 
