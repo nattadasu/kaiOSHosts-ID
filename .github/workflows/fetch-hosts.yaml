@@ -97,28 +97,28 @@ jobs:
         with:
           files: temp/a/
           dest: ./release/zipcwm/adblock.zip
-          recursive: false
+          recursive: true
 
       - name: Archive `AK` in ZIP
         uses: papeloto/action-zip@v1
         with:
           files: temp/ak/
           dest: ./release/zipcwm/adblock-kaios.zip
-          recursive: false
+          recursive: true
 
       - name: Archive `AB` in ZIP
         uses: papeloto/action-zip@v1
         with:
           files: temp/ab/
           dest: ./release/zipcwm/adblock-bypass.zip
-          recursive: false
+          recursive: true
 
       - name: Archive `ABK` in ZIP
         uses: papeloto/action-zip@v1
         with:
           files: temp/abk/
           dest: ./release/zipcwm/adblock-bypass-kaios.zip
-          recursive: false
+          recursive: true
 
       # Try to commit
       - name: Add date timestamp
