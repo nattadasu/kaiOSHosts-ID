@@ -134,7 +134,7 @@ jobs:
       # Prerelease config
       - name: Temporarily rename files
         run: |
-          RAW= "./release/raw"
+          RAW="./release/raw"
           HOTXT=".hosts.txt"
 
           mv $RAW/clear/hosts $RAW/clear/clear$HOTXT
