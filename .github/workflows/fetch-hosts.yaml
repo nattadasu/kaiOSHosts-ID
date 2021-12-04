@@ -51,19 +51,22 @@ jobs:
           KAIOS="./src/kaios.txt"
           BEBAS="./src/bebasid.txt"
           RAW="./release/raw"
+          AB="adblock"
+          BY="bypass"
+          KA="kaios"
 
-          if [[ ! -d "$RAW/adblock" ]]
+          if [[ ! -d "$RAW/$AB" ]]
           then
-              mkdir $RAW/adblock
-              mkdir $RAW/adblock-kaios
-              mkdir $RAW/adblock-bypass
-              mkdir $RAW/adblock-bypass-kaios
+              mkdir $RAW/$AB
+              mkdir $RAW/$AB-$KA
+              mkdir $RAW/$AB-$BY
+              mkdir $RAW/$AB-$BY-$KA
           fi
 
-          cat $HEADER $BASIC $REG > $RAW/adblock/hosts
-          cat $HEADER $BASIC $REG $KAIOS > $RAW/adblock-kaios/hosts
-          cat $HEADER $BASIC $REG $BEBAS > $RAW/adblock-bypass/hosts
-          cat $HEADER $BASIC $REG $BEBAS $KAIOS > $RAW/adblock-bypass-kaios/hosts
+          cat $HEADER $BASIC $REG > $RAW/$AB/hosts
+          cat $HEADER $BASIC $REG $KAIOS > $RAW/$AB-$KA/hosts
+          cat $HEADER $BASIC $REG $BEBAS > $RAW/$AB-$BY/hosts
+          cat $HEADER $BASIC $REG $BEBAS $KAIOS > $RAW/$AB-$BY-$KA/hosts
 
       - name: Copy required files to temporary folder for cwm release
         run: |
