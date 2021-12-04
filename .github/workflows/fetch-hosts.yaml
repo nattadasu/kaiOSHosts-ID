@@ -5,8 +5,8 @@ on:
       - "release"
       - "testing*"
   # Schedule for action to download latest files each 7 days
-  # schedule:
-  #  - cron: "0 0 * * SUN"
+  schedule:
+    - cron: "0 0 * * SUN"
 
 jobs:
   fetch:
@@ -51,28 +51,42 @@ jobs:
           BEBAS="./src/bebasid.txt"
           RAW="./release/raw"
 
+          if [[ ! -d "$RAW/adblock" ]]
+          then
+              mkdir $RAW/adblock
+              mkdir $RAW/adblock-kaios
+              mkdir $RAW/adblock-bypass
+              mkdir $RAW/adblock-bypass-kaios
+          fi
+
           cat $HEADER $BASIC $REG > $RAW/adblock/hosts
-          cat $HEADER $BASIC $REG $KAIOS > $RAW/adblock-kai/hosts
+          cat $HEADER $BASIC $REG $KAIOS > $RAW/adblock-kaios/hosts
           cat $HEADER $BASIC $REG $BEBAS > $RAW/adblock-bypass/hosts
           cat $HEADER $BASIC $REG $BEBAS $KAIOS > $RAW/adblock-bypass-kaios/hosts
 
       - name: Copy required files to temporary folder for cwm release
         run: |
-          unset -v RAW
-
           RAW="./release/raw"
           TMP="./temp"
           SYS="system/etc/"
+          AB="adblock"
+          BY="bypass"
+          KA="kaios"
+
+          mkdir -p $TMP/a/$SYS
+          mkdir -p $TMP/ak/$SYS
+          mkdir -p $TMP/ab/$SYS
+          mkdir -p $TMP/abk/$SYS
 
           for CWM in ./src/cwm/*
           do
             cp -R $CWM $TMP/
           done
 
-          cp $RAW/a/hosts $TMP/a/$SYS
-          cp $RAW/ak/hosts $TMP/ak/$SYS
-          cp $RAW/ab/hosts $TMP/ab/$SYS
-          cp $RAW/abk/hosts $TMP/abk/$SYS
+          cp $RAW/$AB/hosts $TMP/a/$SYS
+          cp $RAW/$AB-$KA/hosts $TMP/ak/$SYS
+          cp $RAW/$AB-$BY/hosts $TMP/ab/$SYS
+          cp $RAW/$AB-$BY-$KA/hosts $TMP/abk/$SYS
 
       - name: Archive `A` in ZIP
         uses: thedoctor0/zip-release@master
@@ -120,7 +134,6 @@ jobs:
       # Prerelease config
       - name: Temporarily rename files
         run: |
-          unset -v RAW
           RAW= "./release/raw"
           HOTXT=".hosts.txt"
 
