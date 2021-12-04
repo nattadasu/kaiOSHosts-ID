@@ -136,12 +136,16 @@ jobs:
         run: |
           RAW="./release/raw"
           HOTXT=".hosts.txt"
+          AB="adblock"
+          BY="bypass"
+          KA="kaios"
+          CL="clear"
 
-          mv $RAW/clear/hosts $RAW/clear/clear$HOTXT
-          mv $RAW/adblock/hosts $RAW/adblock/adblock$HOTXT
-          mv $RAW/adblock-kaios/hosts $RAW/adblock-kaios/adblock-kaios$HOTXT
-          mv $RAW/adblock-bypass/hosts $RAW/adblock-bypass/adblock-bypass$HOTXT
-          mv $RAW/adblock-bypass-kaios/hosts $RAW/adblock-bypass-kaios/adblock-bypass-kaios$HOTXT
+          mv $RAW/$CL/hosts $RAW/$CL/$CL$HOTXT
+          mv $RAW/$AB/hosts $RAW/$AB/$AB$HOTXT
+          mv $RAW/$AB-$KA/hosts $RAW/$AB-$KA/$AB-$KA$HOTXT
+          mv $RAW/$AB-$BY/hosts $RAW/$AB-$BY/$AB-$BY$HOTXT
+          mv $RAW/$AB-$BY-$KA/hosts $RAW/$AB-$BY-$KA/$AB-$BY-$KA$HOTXT
 
       # Publish!
       - name: Upload Release Asset
@@ -156,10 +160,10 @@ jobs:
             release/raw/adblock-bypass-kaios/adblock-bypass-kaios.hosts.txt
             release/zipcwm/clear.zip
             release/zipcwm/adblock.zip
-            release/zipcwm/adblock-kai.zip
+            release/zipcwm/adblock-kaios.zip
             release/zipcwm/adblock-bypass.zip
-            release/zipcwm/adblock-bypass-kai.zip
+            release/zipcwm/adblock-bypass-kaios.zip
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          title: Rilis edisi ${{ env.NOW }}
+          title: 📦 Rilis Edisi ${{ env.NOW }}
           prerelease: false
-          automatic_release_tag: release
+          automatic_release_tag: ${{ env.NOW }}
