@@ -34,12 +34,12 @@ jobs:
         with:
           args: -O src/bebasid.txt https://raw.githubusercontent.com/bebasid/bebasid/master/releases/hosts
 
-      - name: Commit Sources
-        run: |
-          git config --local user.email "nattadasu@users.noreply.github.com"
-          git config --local user.name "nattadasu"
-          git add .
-          git commit --allow-empty -am "🍱 Memperbarui berkas hosts"
+      - name: Commit sources
+        uses: stefanzweifel/git-auto-commit-action@v4.12.0
+        with:
+          commit_message: 🍱 Memperbarui berkas hosts
+          commit_options: --allow-empty
+          file_pattern: .
 
       # Try to build
       - name: Building hosts file
@@ -117,15 +117,17 @@ jobs:
           recursive: false
 
       # Try to commit
-      - name: Prerelease Commit
+      - name: Add date timestamp
         run: |
           NOW=$( date -I )
-
-          git add .
-          git commit --allow-empty -am "📦 Rilis berkas - Edisi ${NOW}"
-          git push -u origin master
-
           echo "NOW=$NOW" >>$GITHUB_ENV
+
+      - name: Commit packages
+        uses: stefanzweifel/git-auto-commit-action@v4.12.0
+        with:
+          commit_message: 📦 Rilis berkas - Edisi ${{ env.NOW }}
+          commit_options: --allow-empty
+          file_pattern: .
 
       # Prerelease config
       - name: Temporarily rename files
