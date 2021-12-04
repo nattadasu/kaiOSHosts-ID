@@ -1,12 +1,12 @@
-name: Fetch Hosts from Providers
+name: Fetch Hosts from Providers and Release
 on:
   push:
     tags:
       - "release"
-      - "testing"
+      - "testing*"
   # Schedule for action to download latest files each 7 days
   # schedule:
-  #  - cron: "0 0 */7 * *"
+  #  - cron: "0 0 * * SUN"
 
 jobs:
   fetch:
@@ -39,7 +39,7 @@ jobs:
           git config --local user.email "nattadasu@users.noreply.github.com"
           git config --local user.name "nattadasu"
           git add .
-          git commit "🍱 Memperbarui berkas hosts"
+          git commit --allow-empty -am "🍱 Memperbarui berkas hosts"
 
       # Try to build
       - name: Building hosts file
@@ -112,7 +112,7 @@ jobs:
           NOW=$( date -I )
 
           git add .
-          git commit "📦 Rilis berkas - Edisi ${NOW}"
+          git commit --allow-empty -am "📦 Rilis berkas - Edisi ${NOW}"
           git push
 
           echo "NOW=$NOW" >>$GITHUB_ENV
