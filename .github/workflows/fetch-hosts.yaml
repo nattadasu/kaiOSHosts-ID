@@ -138,10 +138,10 @@ jobs:
           HOTXT=".hosts.txt"
 
           mv $RAW/clear/hosts $RAW/clear/clear$HOTXT
-          mv $RAW/adblock/hosts $RAW/adblock/a$HOTXT
-          mv $RAW/adblock-kai/hosts $RAW/adblock-kai/ak$HOTXT
-          mv $RAW/adblock-bypass/hosts $RAW/adblock-bypass/ab$HOTXT
-          mv $RAW/adblock-bypass-kai/hosts $RAW/adblock-bypass-kai/abk$HOTXT
+          mv $RAW/adblock/hosts $RAW/adblock/adblock$HOTXT
+          mv $RAW/adblock-kaios/hosts $RAW/adblock-kaios/adblock-kaios$HOTXT
+          mv $RAW/adblock-bypass/hosts $RAW/adblock-bypass/adblock-bypass$HOTXT
+          mv $RAW/adblock-bypass-kaios/hosts $RAW/adblock-bypass-kaios/adblock-bypass-kaios$HOTXT
 
       # Publish!
       - name: Upload Release Asset
@@ -150,10 +150,10 @@ jobs:
         with:
           files: |
             release/raw/clear/clear.hosts.txt
-            release/raw/adblock/a.hosts.txt
-            release/raw/adblock-kai/ak.hosts.txt
-            release/raw/adblock-bypass/ab.hosts.txt
-            release/raw/adblock-bypass-kai/abk.hosts.txt
+            release/raw/adblock/adblock.hosts.txt
+            release/raw/adblock-kaios/adblock-kaios.hosts.txt
+            release/raw/adblock-bypass/adblock-bypass.hosts.txt
+            release/raw/adblock-bypass-kaios/adblock-bypass-kaios.hosts.txt
             release/zipcwm/clear.zip
             release/zipcwm/adblock.zip
             release/zipcwm/adblock-kai.zip
