@@ -40,6 +40,7 @@ jobs:
           commit_message: 🍱 Memperbarui berkas hosts
           commit_options: --allow-empty
           file_pattern: .
+          branch: master
 
       # Try to build
       - name: Building hosts file
@@ -128,6 +129,7 @@ jobs:
           commit_message: 📦 Rilis berkas - Edisi ${{ env.NOW }}
           commit_options: --allow-empty
           file_pattern: .
+          branch: master
 
       # Prerelease config
       - name: Temporarily rename files
