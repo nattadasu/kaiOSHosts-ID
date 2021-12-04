@@ -123,7 +123,7 @@ jobs:
 
           git add .
           git commit --allow-empty -am "📦 Rilis berkas - Edisi ${NOW}"
-          git push origin HEAD:master --force
+          git push -u origin main
 
           echo "NOW=$NOW" >>$GITHUB_ENV
 
