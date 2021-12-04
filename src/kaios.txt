@@ -1,1 +1,12 @@
+
+# =================
+# IP ADDRESS KAIADS
+# =================
+# !! PERINGATAN
+#
+# Anda tidak akan dapat mengakses KaiStore dan/atau melakukan OS update
+# jika line berikut ditambah.
+#
+# Silakan lanjutkan jika anda mengetahui resikonya.
+
 0.0.0.0 ssp.kaiads.com
