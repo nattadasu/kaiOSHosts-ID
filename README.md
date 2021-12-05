@@ -30,13 +30,13 @@ Repo ini dibuat untuk membantu para pengguna KaiOS di Indonesia, terlebih penggu
 Advan Hape Online, dalam berselancar internet tanpa *diganggu* oleh iklan maupun
 [penyensoran pemerintah](https://www.jetorbit.com/blog/apa-itu-internet-positif-apakah-diperlukan/).
 
-Kami memanfaatkan daftar `hosts` dari [Energized][energized] untuk adblock berdasarkan alamat IPV4
+Kami memanfaatkan daftar `hosts` dari [Energized][energized] untuk *adblock* berdasarkan alamat IPV4
 dan IPV6 dan [bebasid][bebasid] untuk *bypass* Internet Positif.
 
 Kami juga menyediakan versi terpisah untuk memblokir iklan dari [KaiAds][kaiads], **akan tetapi
-versi ini dapat merusak beberapa fitur internal, seperti mengunduh atau memperbarui
-aplikasi**.<sup><a href="#fn1">1</a></sup> Pengguna diharapkan waspada jika ingin menggunakan
-versi ini.
+versi ini dapat merusak beberapa fitur internal, seperti mengunduh aplikasi di KaiStore atau
+memperbarui sistem**.<sup><a href="#fn1">1</a></sup> Pengguna diharapkan waspada jika ingin
+menggunakan versi ini.
 
 Untuk keterangan lebih lanjut, berkas *image* cwm ini sudah diujicoba di Advan Hape Online.
 
@@ -44,7 +44,7 @@ Untuk keterangan lebih lanjut, berkas *image* cwm ini sudah diujicoba di Advan H
 > Android (diperlukan *rooting*). Silakan baca [USAGE.md](USAGE.md) untuk mengetahui lebih lanjut.
 >
 > Resiko kerusakan (seperti situs tidak dapat memuat) ditanggung oleh pengguna tersendiri. Repo ini
-> hanya mencakup pengguna KaiOS/Android yang memiliki clockworkmod (cwm) terpasang di partisi
+> hanya mencakup pengguna KaiOS/Android yang memiliki *ClockWorkMod* (cwm) terpasang di partisi
 > *`recovery`*.
 
 ## 🗒 Daftar Variasi Berkas <a id = "lists"></a>
@@ -68,8 +68,8 @@ Untuk mulai mengunduh, silakan pilih salah satu opsi variasi:
   <tr>
     <td style="text-align:right;vertical-align:center;">Adblock</td>
     <td>Cocok untuk hanya menghilangkan iklan browser</td>
-    <td><a href="https://github.com/nattadasu/kaiOSHosts-ID/releases/latest/download/adblock.zip">Tautan</a></td>
-    <td><a href="https://raw.githubusercontent.com/nattadasu/kaiOSHosts-ID/master/release/raw/adblock/hosts">Tautan</a></td>
+    <td style="text-align:center;"><a href="https://github.com/nattadasu/kaiOSHosts-ID/releases/latest/download/adblock.zip">Tautan</a></td>
+    <td style="text-align:center;"><a href="https://raw.githubusercontent.com/nattadasu/kaiOSHosts-ID/master/release/raw/adblock/hosts">Tautan</a></td>
     <td>
       <a href="https://github.com/EnergizedProtection/block">Energized Basic</a>,
       <a href="https://github.com/EnergizedProtection/block">Regional</a>
@@ -78,8 +78,8 @@ Untuk mulai mengunduh, silakan pilih salah satu opsi variasi:
   <tr>
     <td style="text-align:right;vertical-align:center;">Adblock + KaiAds</td>
     <td>Dapat menghilangkan iklan browser dan aplikasi</td>
-    <td><a href="https://github.com/nattadasu/kaiOSHosts-ID/releases/latest/download/adblock-kaios.zip">Tautan</a></td>
-    <td><a href="https://raw.githubusercontent.com/nattadasu/kaiOSHosts-ID/master/release/raw/adblock-kaios/hosts">Tautan</a></td>
+    <td style="text-align:center;"><a href="https://github.com/nattadasu/kaiOSHosts-ID/releases/latest/download/adblock-kaios.zip">⚠ Tautan</a></td>
+    <td style="text-align:center;"><a href="https://raw.githubusercontent.com/nattadasu/kaiOSHosts-ID/master/release/raw/adblock-kaios/hosts">⚠ Tautan</a></td>
     <td>
       <a href="https://github.com/EnergizedProtection/block">Energized Basic</a>,
       <a href="https://github.com/EnergizedProtection/block">Regional</a>,
@@ -89,8 +89,8 @@ Untuk mulai mengunduh, silakan pilih salah satu opsi variasi:
   <tr>
     <td style="text-align:right;vertical-align:center;">Adblock + Bypass</td>
     <td>Cocok untuk hanya menghilangkan iklan browser dan bypass Internet Positif</td>
-    <td><a href="https://github.com/nattadasu/kaiOSHosts-ID/releases/latest/download/adblock-bypass.zip">Tautan</a></td>
-    <td><a href="https://raw.githubusercontent.com/nattadasu/kaiOSHosts-ID/master/release/raw/adblock-bypass/hosts">Tautan</a></td>
+    <td style="text-align:center;"><a href="https://github.com/nattadasu/kaiOSHosts-ID/releases/latest/download/adblock-bypass.zip">Tautan</a></td>
+    <td style="text-align:center;"><a href="https://raw.githubusercontent.com/nattadasu/kaiOSHosts-ID/master/release/raw/adblock-bypass/hosts">Tautan</a></td>
     <td>
       <a href="https://github.com/EnergizedProtection/block">Energized Basic</a>,
       <a href="https://github.com/EnergizedProtection/block">Regional</a>,
@@ -100,8 +100,8 @@ Untuk mulai mengunduh, silakan pilih salah satu opsi variasi:
   <tr>
     <td style="text-align:right;vertical-align:center;">Adblock + Bypass + KaiAds</td>
     <td>Dapat menghilangkan iklan browser dan aplikasi, juga bypass Internet Positif</td>
-    <td><a href="https://github.com/nattadasu/kaiOSHosts-ID/releases/latest/download/adblock-bypass-kaios.zip">Tautan</a></td>
-    <td><a href="https://raw.githubusercontent.com/nattadasu/kaiOSHosts-ID/master/release/raw/adblock-bypass-kaios/hosts">Tautan</a></td>
+    <td style="text-align:center;"><a href="https://github.com/nattadasu/kaiOSHosts-ID/releases/latest/download/adblock-bypass-kaios.zip">⚠ Tautan</a></td>
+    <td style="text-align:center;"><a href="https://raw.githubusercontent.com/nattadasu/kaiOSHosts-ID/master/release/raw/adblock-bypass-kaios/hosts">⚠ Tautan</a></td>
     <td>
       <a href="https://github.com/EnergizedProtection/block">Energized Basic</a>,
       <a href="https://github.com/EnergizedProtection/block">Regional</a>,
@@ -112,8 +112,8 @@ Untuk mulai mengunduh, silakan pilih salah satu opsi variasi:
   <tr>
     <td style="text-align:right;vertical-align:center;">Clear</td>
     <td>Menghilangkan konfigurasi secara total dari repositori ini</td>
-    <td><a href="https://github.com/nattadasu/kaiOSHosts-ID/releases/latest/download/clear.zip">Tautan</a></td>
-    <td><a href="https://raw.githubusercontent.com/nattadasu/kaiOSHosts-ID/master/release/raw/clear/hosts">Tautan</a></td>
+    <td style="text-align:center;"><a href="https://github.com/nattadasu/kaiOSHosts-ID/releases/latest/download/clear.zip">Tautan</a></td>
+    <td style="text-align:center;"><a href="https://raw.githubusercontent.com/nattadasu/kaiOSHosts-ID/master/release/raw/clear/hosts">Tautan</a></td>
     <td>Repositori ini</td>
   </tr>
 </tbody>
@@ -127,7 +127,7 @@ Silakan menuju ke [USAGE.md](USAGE.md) untuk informasi lebih lanjut.
 
 - GitHub Action - Otomasi Perilisan
 - [bebasid/bebasid][bebasid] - Berkas *hosts* untuk bypass pemblokiran dari pemerintah
-- [Energized Protection][energized] - Berkas *hosts* untuk pemblokir iklan.
+- [Energized Protection][energized] - Berkas *hosts* untuk pemblokiran iklan.
 
 ## ✍️ Pemilik <a id= "authors"></a>
 
@@ -141,7 +141,8 @@ berpartisipasi di proyek ini.
 Terimakasih sebesar-besarnya untuk yang telah membantu pemilik proyek dalam membangun konfigurasi
 sistem dan otomasi perilisan.
 
-- [@yezki](https://github.com/yezki) - Untuk sarannya atas konfigurasi GitHub Actions <!-- yang bikin pusing super -->
+- [@yezki](https://github.com/yezki) - Untuk sarannya atas konfigurasi GitHub Actions
+  <!-- yang bikin pusing super -->
 - Anggota Forum Pengguna Advan Smart Feature Phone 2406 KaiOS di Facebook.
 
 ## 👣 Catatan Kaki <a id="footnotes"></a>

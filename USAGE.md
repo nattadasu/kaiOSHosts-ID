@@ -51,13 +51,16 @@ Untuk info mengenai cara *rooting*, tergantung merek, silakan baca:
 > Untuk pengguna [gawai](#fn1) merek lainnya, disarankan menggunakan
 > [metode melalui `adb`](#melalui-adb).
 
-1. Masuk ke menu `cwm` dengan mematikan [gawai](#fn1) terlebih dahulu.
-2. Nyalakan kembali gawai Anda sekaligus menekan tombol `#`.
-3. Apabila menu muncul. Pilih "Recovery Mode" dengan menekan tombol `#` dan konfirmasi opsi dengan
+1. Unduh salah satu versi berkas `hosts` dalam format ZIP CWM yang tersedia di
+   [halaman pertama](README.md).
+2. Salin berkas ke kartu memori eksternal HP.
+3. Matikan [gawai](#fn1) terlebih dahulu.
+4. Masuk ke menu `cwm` dengan menyalakan kembali gawai Anda sekaligus menekan tombol `#`.
+5. Apabila menu muncul. Pilih "*Recovery Mode*" dengan menekan tombol `#` dan konfirmasi opsi dengan
    menekan tombol `*`.
-4. Tuju menu "Install zip" > "Choose zip from ExtraSD" > Cari berkasnya > klik berkas dengan nama
-   varian yang telah diunduh.
-5. Tunggu proses selesai lalu kembali ke menu utama, pilih "Reboot Phone".
+6. Tuju menu "*Install zip*" > "*Choose zip from ExtraSD*" > Cari berkasnya > klik berkas dengan
+   nama varian yang telah diunduh.
+7. Tunggu proses selesai lalu kembali ke menu utama, pilih "*Reboot Phone*".
 
 ### Melalui `adb`
 
@@ -75,7 +78,8 @@ Anda memerlukan:
 
 1. Pastikan fitur debugger/developer pada telepon genggam aktif. (muncul logo bug/serangga di status
    bar).
-   * Jika tidak ada, buka "Settings" >  
+   * Jika tidak ada, buka "*Settings*" > "*Device*" > "*Developer*" > "*Debugger*".
+     * Pastikan opsi terpilih di *debugger* ialah "ADB and DevTools".
 2. Buka Command Prompt (Windows), Terminal (Linux, BSD, macOS), ataupun Powershell.
 3. Ketik `adb devices` pada terminal, lalu tekan Enter/Return.
 4. Konfirmasi apa yang terdaftar:
