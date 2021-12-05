@@ -117,9 +117,25 @@ Anda memerlukan:
 #### Pemuatan berkas
 
 1. Unduh salah satu versi berkas `hosts` dalam format RAW.
-   * Apabila berkas dalam format ZIP, silakan ekstrak terlebih dahulu.
-   * Pastikan kembali format berkas `hosts` bukan dokumen teks (.txt).
-     * Jika ada, hapus ".txt" dari nama berkas.
+   * Pastikan kembali format berkas `hosts` bukan dokumen teks (`[VERSI].hosts.txt`).
+     * Jika ada, ubah nama berkas menjadi `hosts` saja.
+     * Untuk dapat mengubah `.txt`, buka:
+       * **Windows 11**:
+         1. Tekan logo 🔎 di *taskbar* (atau tekan `Win`+`S`)
+         2. Cari "File Explorer Options".
+         3. Arahkan ke tab "*View*".
+         4. Di kolom "*Advanced Setting*," hapus centang "*Hide extensions for known file types*."
+         5. Tekan "*OK*."
+       * **Windows 8, 8.1, 10**:
+         1. Buka *File Explorer*.
+         2. Di bagian tab, ikuti:\
+            ![Sample](assets/win10.png)
+       * **Windows XP, Vista, 7**:
+         1. Buka *File Explorer*.
+         2. Ketuk tombol "*Organize*."
+         3. Arahkan ke tab "*View*".
+         4. Di kolom "*Advanced Setting*," hapus centang "*Hide extensions for known file types*."
+         5. Tekan "*OK*."
 2. Berdasarkan OS:
    * Untuk pengguna Windows:
      * Dari lokasi `hosts` yg baru, sambil tahan `shift`, klik kanan mouse > "Open Command Here".
@@ -144,9 +160,28 @@ Anda memerlukan:
 
 ### Root
 
-1. Unduh versi `hosts` yang Anda inginkan.
+1. Unduh versi `hosts` yang Anda inginkan dalam format RAW.
    * Kami menyarankan untuk mengambil versi `hosts` yang tidak ada implementasi KaiAds.
      <!-- Soalnya kagak bermanfaat kali bruh. -->
+   * Pastikan kembali format berkas `hosts` bukan dokumen teks (`[VERSI].hosts.txt`).
+     * Jika ada, ubah nama berkas menjadi `hosts` saja.
+     * Untuk dapat mengubah `.txt`, buka:
+       * **Windows 11**:
+         1. Tekan logo 🔎 di *taskbar* (atau tekan `Win`+`S`)
+         2. Cari "File Explorer Options".
+         3. Arahkan ke tab "*View*".
+         4. Di kolom "*Advanced Setting*," hapus centang "*Hide extensions for known file types*."
+         5. Tekan "*OK*."
+       * **Windows 8, 8.1, 10**:
+         1. Buka *File Explorer*.
+         2. Di bagian tab, ikuti:\
+            ![Sample](assets/win10.png)
+       * **Windows XP, Vista, 7**:
+         1. Buka *File Explorer*.
+         2. Ketuk tombol "*Organize*."
+         3. Arahkan ke tab "*View*".
+         4. Di kolom "*Advanced Setting*," hapus centang "*Hide extensions for known file types*."
+         5. Tekan "*OK*."
 2. Salin file `hosts` dan tempel di folder `/etc` kemudian [muat ulang](#fn2) telepon genggam.
 
 ### Non-root
@@ -154,6 +189,25 @@ Anda memerlukan:
 1. Unduh versi `hosts` yang Anda inginkan.
    * Kami menyarankan untuk mengambil versi `hosts` yang tidak ada implementasi KaiAds.
      <!-- Soalnya kagak bermanfaat kali bruh. -->
+   * Pastikan kembali format berkas `hosts` bukan dokumen teks (`[VERSI].hosts.txt`).
+     * Jika ada, ubah nama berkas menjadi `hosts` saja.
+     * Untuk dapat mengubah `.txt`, buka:
+       * **Windows 11**:
+         1. Tekan logo 🔎 di *taskbar* (atau tekan `Win`+`S`)
+         2. Cari "File Explorer Options".
+         3. Arahkan ke tab "*View*".
+         4. Di kolom "*Advanced Setting*," hapus centang "*Hide extensions for known file types*."
+         5. Tekan "*OK*."
+       * **Windows 8, 8.1, 10**:
+         1. Buka *File Explorer*.
+         2. Di bagian tab, ikuti:\
+            ![Sample](assets/win10.png)
+       * **Windows XP, Vista, 7**:
+         1. Buka *File Explorer*.
+         2. Ketuk tombol "*Organize*."
+         3. Arahkan ke tab "*View*".
+         4. Di kolom "*Advanced Setting*," hapus centang "*Hide extensions for known file types*."
+         5. Tekan "*OK*."
 2. Install aplikasi [Hosts Go][hostsGo].
 3. Buka aplikasinya.
 4. Ketuk "Hosts Settings".
@@ -165,6 +219,25 @@ Anda memerlukan:
 1. Unduh versi `hosts` yang Anda inginkan.
    * Kami menyarankan untuk mengambil versi `hosts` yang tidak ada implementasi KaiAds.
      <!-- Soalnya kagak bermanfaat kali bruh. -->
+   * Pastikan kembali format berkas `hosts` bukan dokumen teks (`[VERSI].hosts.txt`).
+     * Jika ada, ubah nama berkas menjadi `hosts` saja.
+     * Untuk dapat mengubah `.txt`, buka:
+       * **Windows 11**:
+         1. Tekan logo 🔎 di *taskbar* (atau tekan `Win`+`S`)
+         2. Cari "File Explorer Options".
+         3. Arahkan ke tab "*View*".
+         4. Di kolom "*Advanced Setting*," hapus centang "*Hide extensions for known file types*."
+         5. Tekan "*OK*."
+       * **Windows 8, 8.1, 10**:
+         1. Buka *File Explorer*.
+         2. Di bagian tab, ikuti:\
+            ![Sample](assets/win10.png)
+       * **Windows XP, Vista, 7**:
+         1. Buka *File Explorer*.
+         2. Ketuk tombol "*Organize*."
+         3. Arahkan ke tab "*View*".
+         4. Di kolom "*Advanced Setting*," hapus centang "*Hide extensions for known file types*."
+         5. Tekan "*OK*."
 2. Ekstrak (jika berkas dalam kompresi ZIP) dan/atau sunting nama (*rename*) dengan menghilangkan
    format berkas seperti `txt` (jika ada).
 3. Salin file `hosts` dan tempel di folder `C:\Windows\System32\drivers\etc`
@@ -253,19 +326,21 @@ Anda memerlukan:
 3. Dari beberapa cara, ketik
    1. Berkas dari halaman "*Release*"
       ```sh
-      sudo wget <url> -O /etc/hosts
+      sudo wget https://github.com/nattadasu/kaiOSHosts-ID/releases/latest/download/<VERSI>.hosts.txt -O /etc/hosts
       ```
    2. Berkas dari repo
       ```sh
-      sudo wget <url> -O /etc/hosts
+      sudo wget https://raw.githubusercontent.com/nattadasu/kaiOSHosts-ID/master/release/raw/<VERSI>/hosts -O /etc/hosts
       ```
    * Kami menyarankan untuk mengambil versi `hosts` yang tidak ada implementasi KaiAds.
    <!-- Soalnya kagak bermanfaat kali bruh. -->
+   * Versi yang tersedia:\
+     `clear`, `adblock`, `adblock-bypass`
 4. Lakukan [muat ulang](#fn2) gawai jika diperlukan.
 
 ## 😈 BSD
 
-1. Buka aplikasi Terminal.
+1. Buka aplikasi terminal favorit.
 2. Lakukan pencadangan terlebih dahulu
    ```sh
    sudo cp /etc/hosts /etc/hosts.old
@@ -273,14 +348,16 @@ Anda memerlukan:
 3. Dari beberapa cara, ketik
    1. Berkas dari halaman "*Release*"
       ```sh
-      sudo curl <url> -o /etc/hosts
+      sudo curl https://github.com/nattadasu/kaiOSHosts-ID/releases/latest/download/<VERSI>.hosts.txt -o /etc/hosts
       ```
    2. Berkas dari repo
       ```sh
-      sudo curl <url> -o /etc/hosts
+      sudo curl https://raw.githubusercontent.com/nattadasu/kaiOSHosts-ID/master/release/raw/<VERSI>/hosts -o /etc/hosts
       ```
    * Kami menyarankan untuk mengambil versi `hosts` yang tidak ada implementasi KaiAds.
    <!-- Soalnya kagak bermanfaat kali bruh. -->
+   * Versi yang tersedia:\
+     `clear`, `adblock`, `adblock-bypass`
 4. Lakukan [muat ulang](#fn2) gawai jika diperlukan.
 
 > **Catatan**:
@@ -295,7 +372,7 @@ Anda memerlukan:
 
 ## 🍎 macOS
 
-1. Buka aplikasi terminal favorit.
+1. Buka aplikasi Terminal.
 2. Lakukan pencadangan terlebih dahulu
    ```sh
    sudo cp /etc/hosts /etc/hosts.old
@@ -303,14 +380,16 @@ Anda memerlukan:
 3. Dari beberapa cara, ketik
    1. Berkas dari halaman "*Release*"
       ```sh
-      sudo curl <url> -o /etc/hosts
+      sudo curl https://github.com/nattadasu/kaiOSHosts-ID/releases/latest/download/<VERSI>.hosts.txt -o /etc/hosts
       ```
    2. Berkas dari repo
       ```sh
-      sudo curl <url> -o /etc/hosts
+      sudo curl https://raw.githubusercontent.com/nattadasu/kaiOSHosts-ID/master/release/raw/<VERSI>/hosts -o /etc/hosts
       ```
    * Kami menyarankan untuk mengambil versi `hosts` yang tidak ada implementasi KaiAds.
    <!-- Soalnya kagak bermanfaat kali bruh. -->
+   * Versi yang tersedia:\
+     `clear`, `adblock`, `adblock-bypass`
 4. Lakukan [muat ulang](#fn2) gawai jika diperlukan.
 
 > **Catatan**:

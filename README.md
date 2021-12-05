@@ -16,17 +16,13 @@
 
 ## 📝 Daftar Isi
 
-- [Tentang](#about)
-- [Memulai](#getting_started)
-- [Daftar Variasi Berkas](#lists)
-- [Catatan Kaki](#footnotes)
-<!--
-- [Deployment](#deployment)
-- [Usage](#usage)
-- [Built Using](#built_using)
-- [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
--->
+- [🧐 Tentang](#about)
+- [🗒 Daftar Variasi Berkas](#lists)
+- [🎈 Penggunaan](#usage)
+- [⛏️ Dibangun Menggunakan](#built_using)
+- [✍️ Pemilik](#authors)
+- [🎉 Persembahan](#acknowledgement)
+- [👣 Catatan Kaki](#footnotes)
 
 ## 🧐 Tentang <a id= "about"></a>
 
@@ -37,15 +33,15 @@ Advan Hape Online, dalam berselancar internet tanpa *diganggu* oleh iklan maupun
 Kami memanfaatkan daftar `hosts` dari [Energized][energized] untuk adblock berdasarkan alamat IPV4
 dan IPV6 dan [bebasid][bebasid] untuk *bypass* Internet Positif.
 
-Kami juga menyediakan versi terpisah untuk memblokir iklan dari [KaiAds][kaiads], <strong>akan
-tetapi versi ini dapat merusak beberapa fitur internal, seperti mengunduh atau memperbarui aplikasi
-</strong>.<sup><a href="#fn1">1</a></sup> Pengguna diharapkan waspada jika ingin menggunakan versi
-ini.
+Kami juga menyediakan versi terpisah untuk memblokir iklan dari [KaiAds][kaiads], **akan tetapi
+versi ini dapat merusak beberapa fitur internal, seperti mengunduh atau memperbarui
+aplikasi**.<sup><a href="#fn1">1</a></sup> Pengguna diharapkan waspada jika ingin menggunakan
+versi ini.
 
 Untuk keterangan lebih lanjut, berkas *image* cwm ini sudah diujicoba di Advan Hape Online.
 
 > Repo ini juga dapat digunakan bagi pengguna OS lainnya seperti Windows, Linux, BSD, macOS, hingga
-> Android (diperlukan *rooting*). Silakan baca [`USAGE.md`](USAGE.md) untuk mengetahui lebih lanjut.
+> Android (diperlukan *rooting*). Silakan baca [USAGE.md](USAGE.md) untuk mengetahui lebih lanjut.
 >
 > Resiko kerusakan (seperti situs tidak dapat memuat) ditanggung oleh pengguna tersendiri. Repo ini
 > hanya mencakup pengguna KaiOS/Android yang memiliki clockworkmod (cwm) terpasang di partisi
@@ -72,8 +68,8 @@ Untuk mulai mengunduh, silakan pilih salah satu opsi variasi:
   <tr>
     <td style="text-align:right;vertical-align:center;">Adblock</td>
     <td>Cocok untuk hanya menghilangkan iklan browser</td>
-    <td></td>
-    <td></td>
+    <td><a href="https://github.com/nattadasu/kaiOSHosts-ID/releases/latest/download/adblock.zip">Tautan</a></td>
+    <td><a href="https://raw.githubusercontent.com/nattadasu/kaiOSHosts-ID/master/release/raw/adblock/hosts">Tautan</a></td>
     <td>
       <a href="https://github.com/EnergizedProtection/block">Energized Basic</a>,
       <a href="https://github.com/EnergizedProtection/block">Regional</a>
@@ -82,8 +78,8 @@ Untuk mulai mengunduh, silakan pilih salah satu opsi variasi:
   <tr>
     <td style="text-align:right;vertical-align:center;">Adblock + KaiAds</td>
     <td>Dapat menghilangkan iklan browser dan aplikasi</td>
-    <td></td>
-    <td></td>
+    <td><a href="https://github.com/nattadasu/kaiOSHosts-ID/releases/latest/download/adblock-kaios.zip">Tautan</a></td>
+    <td><a href="https://raw.githubusercontent.com/nattadasu/kaiOSHosts-ID/master/release/raw/adblock-kaios/hosts">Tautan</a></td>
     <td>
       <a href="https://github.com/EnergizedProtection/block">Energized Basic</a>,
       <a href="https://github.com/EnergizedProtection/block">Regional</a>,
@@ -93,8 +89,8 @@ Untuk mulai mengunduh, silakan pilih salah satu opsi variasi:
   <tr>
     <td style="text-align:right;vertical-align:center;">Adblock + Bypass</td>
     <td>Cocok untuk hanya menghilangkan iklan browser dan bypass Internet Positif</td>
-    <td></td>
-    <td></td>
+    <td><a href="https://github.com/nattadasu/kaiOSHosts-ID/releases/latest/download/adblock-bypass.zip">Tautan</a></td>
+    <td><a href="https://raw.githubusercontent.com/nattadasu/kaiOSHosts-ID/master/release/raw/adblock-bypass/hosts">Tautan</a></td>
     <td>
       <a href="https://github.com/EnergizedProtection/block">Energized Basic</a>,
       <a href="https://github.com/EnergizedProtection/block">Regional</a>,
@@ -104,8 +100,8 @@ Untuk mulai mengunduh, silakan pilih salah satu opsi variasi:
   <tr>
     <td style="text-align:right;vertical-align:center;">Adblock + Bypass + KaiAds</td>
     <td>Dapat menghilangkan iklan browser dan aplikasi, juga bypass Internet Positif</td>
-    <td></td>
-    <td></td>
+    <td><a href="https://github.com/nattadasu/kaiOSHosts-ID/releases/latest/download/adblock-bypass-kaios.zip">Tautan</a></td>
+    <td><a href="https://raw.githubusercontent.com/nattadasu/kaiOSHosts-ID/master/release/raw/adblock-bypass-kaios/hosts">Tautan</a></td>
     <td>
       <a href="https://github.com/EnergizedProtection/block">Energized Basic</a>,
       <a href="https://github.com/EnergizedProtection/block">Regional</a>,
@@ -113,87 +109,40 @@ Untuk mulai mengunduh, silakan pilih salah satu opsi variasi:
       <a href="https://ivan-hc.github.io/bananahackers/ADBlock.html">KaiAds</a>
     </td>
   </tr>
+  <tr>
+    <td style="text-align:right;vertical-align:center;">Clear</td>
+    <td>Menghilangkan konfigurasi secara total dari repositori ini</td>
+    <td><a href="https://github.com/nattadasu/kaiOSHosts-ID/releases/latest/download/clear.zip">Tautan</a></td>
+    <td><a href="https://raw.githubusercontent.com/nattadasu/kaiOSHosts-ID/master/release/raw/clear/hosts">Tautan</a></td>
+    <td>Repositori ini</td>
+  </tr>
 </tbody>
 </table>
 
-<!--
-## 🏁 Memulai <a id= "getting_started"></a>
+## 🎈 Penggunaan <a id="usage"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+Silakan menuju ke [USAGE.md](USAGE.md) untuk informasi lebih lanjut.
 
-### Prerequisites
+## ⛏️ Dibangun Menggunakan <a id= "built_using"></a>
 
-What things you need to install the software and how to install them.
+- GitHub Action - Otomasi Perilisan
+- [bebasid/bebasid][bebasid] - Berkas *hosts* untuk bypass pemblokiran dari pemerintah
+- [Energized Protection][energized] - Berkas *hosts* untuk pemblokir iklan.
 
-```
-Give examples
-```
+## ✍️ Pemilik <a id= "authors"></a>
 
-### Installing
+- [@nattadasu](https://github.com/nattadasu)
 
-A step by step series of examples that tell you how to get a development env running.
+Lihat pula daftar [kontributor](https://github.com/nattadasu/kaiOSHosts-ID/contributors) yang telah
+berpartisipasi di proyek ini.
 
-Say what the step will be
+## 🎉 Persembahan <a id= "acknowledgement"></a>
 
-```
-Give the example
-```
+Terimakasih sebesar-besarnya untuk yang telah membantu pemilik proyek dalam membangun konfigurasi
+sistem dan otomasi perilisan.
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
-
-## 🔧 Running the tests <a id= "tests"></a>
-
-Explain how to run the automated tests for this system.
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## 🎈 Usage <a id="usage"></a>
-
-Add notes about how to use the system.
-
-## 🚀 Deployment <a id= "deployment"></a>
-
-Add additional notes about how to deploy this on a live system.
-
-## ⛏️ Built Using <a id= "built_using"></a>
-
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
-
-## ✍️ Authors <a id= "authors"></a>
-
-- [@nattadasu](https://github.com/nattadasu) - Idea & Initial work
-
-See also the list of [contributors](https://github.com/nattadasu/kaiOSHosts-ID/contributors) who participated in this project.
-
-## 🎉 Acknowledgements <a id= "acknowledgement"></a>
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
--->
+- [@yezki](https://github.com/yezki) - Untuk sarannya atas konfigurasi GitHub Actions <!-- yang bikin pusing super -->
+- Anggota Forum Pengguna Advan Smart Feature Phone 2406 KaiOS di Facebook.
 
 ## 👣 Catatan Kaki <a id="footnotes"></a>
 
