@@ -143,7 +143,7 @@ sistem dan otomasi perilisan.
 
 - [@yezki](https://github.com/yezki) - Untuk sarannya atas konfigurasi GitHub Actions
   <!-- yang bikin pusing super -->
-- Anggota Forum Pengguna Advan Smart Feature Phone 2406 KaiOS di Facebook.
+- [Anggota Forum Pengguna Advan Smart Feature Phone 2406 KaiOS][forum] di Facebook.
 
 ## 👣 Catatan Kaki <a id="footnotes"></a>
 
@@ -153,3 +153,4 @@ sistem dan otomasi perilisan.
 [energized]: https://github.com/EnergizedProtection/block
 [kaiads]: https://ivan-hc.github.io/bananahackers/ADBlock.html
 [bebasid]: https://github.com/bebasid/bebasid
+[forum]: https://www.facebook.com/groups/799381347207480
