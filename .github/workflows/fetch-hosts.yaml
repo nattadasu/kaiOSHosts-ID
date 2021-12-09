@@ -42,10 +42,16 @@ jobs:
         with:
           args: -O src/bebasid.txt https://raw.githubusercontent.com/bebasid/bebasid/master/releases/hosts
 
+      # Try to commit src/*
+      - name: Add date timestamp
+        run: |
+          NOW=$( date -I )
+          echo "NOW=$NOW" >>$GITHUB_ENV
+
       - name: Commit sources
         uses: stefanzweifel/git-auto-commit-action@v4.12.0
         with:
-          commit_message: 🍱 Memperbarui berkas hosts
+          commit_message: 🍱 Memperbarui berkas hosts - Edisi ${{ env.NOW }}
           commit_options: --allow-empty
           file_pattern: .
           branch: master
@@ -128,12 +134,7 @@ jobs:
           dest: ./release/zipcwm/adblock-bypass-kaios.zip
           recursive: true
 
-      # Try to commit
-      - name: Add date timestamp
-        run: |
-          NOW=$( date -I )
-          echo "NOW=$NOW" >>$GITHUB_ENV
-
+      # Try to commit bin
       - name: Commit packages
         uses: stefanzweifel/git-auto-commit-action@v4.12.0
         with:
