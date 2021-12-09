@@ -1,0 +1,21 @@
+# Comma-separated list of accepted status codes for valid links.
+# Omit to accept all response types.
+accept = "200,204,206"
+
+# Only test links with the given scheme (e.g. https)
+# Omit to check links with any scheme
+#scheme = "https"
+
+# Request method
+method = "get"
+
+# Custom request headers
+headers = [
+    "accept=text/html"
+]
+
+# Exclude link-local IP address range from checking
+exclude_link_local = true
+
+# Exclude all mail addresses from checking
+exclude_mail = false
