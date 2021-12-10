@@ -19,7 +19,7 @@ jobs:
           submodules: true
 
       - name: Link Checker
-        uses: lycheeverse/lychee-action@v1.1.1
+        uses: lycheeverse/lychee-action@v1.2.0
         with:
           args: -v -c "config/lychee.toml" -n "config/links.txt" -b .
         env:
