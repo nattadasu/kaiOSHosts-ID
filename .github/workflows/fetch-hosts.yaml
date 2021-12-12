@@ -20,7 +20,7 @@ jobs:
 
       - name: Wait for link check to finish
         run: |
-          sleep 30s
+          sleep 90s
         shell: bash
 
       # Fetch data
