@@ -4412,6 +4412,7 @@
 208.100.24.252 relay.sankakucomplex.com
 208.100.24.252 mailrelay.sankakucomplex.com
 185.59.220.194 v.sankakucomplex.com
+185.152.67.139 v.sankakucomplex.com
 208.100.24.252 app1.sankakucomplex.com
 208.100.47.78 secure.remotesysadmin.com
 208.100.41.73 smtp2.sankakucomplex.com
@@ -14153,6 +14154,20 @@
 104.21.95.253 en.fullmatchsports.co
 104.21.95.253 us.fullmatchsports.co
 
+# [fullmatchsports.cc]
+172.67.171.233 fullmatchsports.cc
+172.67.171.233 www.fullmatchsports.cc
+104.21.95.253 fullmatchsports.cc
+104.21.95.253 www.fullmatchsports.cc
+172.67.187.58 fullmatchsports.cc
+172.67.187.58 www.fullmatchsports.cc
+172.67.173.221 fullmatchsports.cc
+172.67.173.221 www.fullmatchsports.cc
+172.67.171.233 en.fullmatchsports.cc
+104.21.95.253 en.fullmatchsports.cc
+172.67.171.233 us.fullmatchsports.cc
+104.21.95.253 us.fullmatchsports.cc
+
 # [muchohentai.com]
 104.27.206.92 static3.muchohentai.com
 104.27.207.92 static4.muchohentai.com
@@ -18369,3 +18384,32 @@
 # [movies123.show]
 104.21.85.65 movies123.show
 104.21.85.65 www.movies123.show
+
+# [simontok.vip]
+172.67.189.7 simontok.vip
+172.67.189.7 www.simontok.vip
+
+# [score808.com]
+47.242.65.106 score808.com
+47.242.65.106 www.score808.com
+
+# [cumfacegenerator.com]
+104.21.95.135 cumfacegenerator.com
+104.21.95.135 www.cumfacegenerator.com
+172.67.144.253 cumfacegenerator.com
+172.67.144.253 www.cumfacegenerator.com
+104.21.95.135 mail.cumfacegenerator.com
+172.67.144.253 mail.cumfacegenerator.com
+173.45.173.75 dc-d34c9a9a217b.cumfacegenerator.com
+
+# [nontongp.com]
+104.21.55.126 nontongp.com
+104.21.55.126 www.nontongp.com
+142.250.186.51 nontongp.com
+142.250.186.51 www.nontongp.com
+
+# [javfc2.net]
+104.21.72.140 javfc2.net
+104.21.72.140 www.javfc2.net
+172.67.151.40 javfc2.net
+172.67.151.40 www.javfc2.net
