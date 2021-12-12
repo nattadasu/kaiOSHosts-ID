@@ -2,7 +2,7 @@ name: Check link if reachable
 on:
   push:
     tags:
-      - "release"
+      - "release*"
       - "testing*"
   # Schedule for action to download latest files each 7 days
   schedule:
@@ -30,4 +30,4 @@ jobs:
         with:
           title: Link Checker Report
           content-filepath: ./lychee/out.md
-          labels: report, automated issue
+          labels: report, automated issue, lychee

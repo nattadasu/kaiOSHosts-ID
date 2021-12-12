@@ -2,7 +2,7 @@ name: Fetch Hosts from Providers and Release
 on:
   push:
     tags:
-      - "release"
+      - "release*"
       - "testing*"
   # Schedule for action to download latest files each 7 days
   schedule:
@@ -18,13 +18,10 @@ jobs:
         with:
           submodules: true
 
-      - name: Wait for tests to succeed
-        uses: lewagon/wait-on-check-action@v1.1.1
-        with:
-          ref: ${{ github.ref }}
-          check-name: Fetch hosts file and then try to release
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          wait-interval: 60 # in seconds
+      - name: Wait for link check to finish
+        run: |
+          sleep 30s
+        shell: bash
 
       # Fetch data
       - name: Download Energized (Basic) Host file

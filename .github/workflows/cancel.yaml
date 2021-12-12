@@ -7,7 +7,7 @@ on:
 jobs:
   cancel:
     name: Cancel workflow
-    if: github.event.label.name == 'automated issue'
+    if: github.event.label.name == 'lychee'
     runs-on: ubuntu-latest
     timeout-minutes: 1
     steps:
