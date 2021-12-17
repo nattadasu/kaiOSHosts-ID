@@ -303,6 +303,7 @@ jobs:
             release/raw/adblock-bypass-safesearch/adblock-bypass-safesearch.hosts.txt
             release/raw/adblock-bypass-kaios/adblock-bypass-kaios.hosts.txt
             release/raw/adblock-bypass-safesearch-kaios/adblock-bypass-safesearch-kaios.hosts.txt
+            release/zipcwm/clear.zip
             release/zipcwm/bypass.zip
             release/zipcwm/bypass-safesearch.zip
             release/zipcwm/bypass-kaios.zip
