@@ -217,7 +217,7 @@ jobs:
         uses: papeloto/action-zip@v1
         with:
           files: temp/ask/
-          dest: ./release/zipcwm/bypass=safesearch-kaios.zip
+          dest: ./release/zipcwm/adblock-safesearch-kaios.zip
           recursive: true
 
       - name: Archive `AB` in ZIP
