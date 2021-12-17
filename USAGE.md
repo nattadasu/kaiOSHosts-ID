@@ -6,8 +6,7 @@ Berkas ini akan menjelaskan bagaimana Anda dapat menerapkan berkas hosts yang te
 repo ini.
 
 _**Peringatan**: Resiko kerusakan (seperti situs tidak dapat memuat) ditanggung oleh pengguna
-tersendiri. Repo ini hanya mencakup pengguna KaiOS/Android yang memiliki clockworkmod (`cwm`)
-terpasang di partisi `recovery`._
+tersendiri._
 
 ## Daftar Isi
 
@@ -339,7 +338,8 @@ Anda memerlukan:
    * Kami menyarankan untuk mengambil versi `hosts` yang tidak ada implementasi KaiAds.
    <!-- Soalnya kagak bermanfaat kali bruh. -->
    * Versi yang tersedia:\
-     `clear`, `adblock`, `adblock-bypass`
+     `clear`, `adblock`, `adblock-safesearch`,  `adblock-bypasss`, `adblock-bypass-safesearch`,
+     `bypass`, `bypass-safesearch`
 4. Lakukan [muat ulang](#fn2) gawai jika diperlukan.
 
 ## 😈 BSD
@@ -361,7 +361,8 @@ Anda memerlukan:
    * Kami menyarankan untuk mengambil versi `hosts` yang tidak ada implementasi KaiAds.
    <!-- Soalnya kagak bermanfaat kali bruh. -->
    * Versi yang tersedia:\
-     `clear`, `adblock`, `adblock-bypass`
+     `clear`, `adblock`, `adblock-safesearch`,  `adblock-bypasss`, `adblock-bypass-safesearch`,
+     `bypass`, `bypass-safesearch`
 4. Lakukan [muat ulang](#fn2) gawai jika diperlukan.
 
 > **Catatan**:
@@ -393,7 +394,8 @@ Anda memerlukan:
    * Kami menyarankan untuk mengambil versi `hosts` yang tidak ada implementasi KaiAds.
    <!-- Soalnya kagak bermanfaat kali bruh. -->
    * Versi yang tersedia:\
-     `clear`, `adblock`, `adblock-bypass`
+     `clear`, `adblock`, `adblock-safesearch`,  `adblock-bypasss`, `adblock-bypass-safesearch`,
+     `bypass`, `bypass-safesearch`
 4. Lakukan [muat ulang](#fn2) gawai jika diperlukan.
 
 > **Catatan**:
