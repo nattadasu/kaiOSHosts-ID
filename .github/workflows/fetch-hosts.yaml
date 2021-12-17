@@ -61,23 +61,51 @@ jobs:
           REG="./src/energizedRegional.txt"
           KAIOS="./src/kaios.txt"
           BEBAS="./src/bebasid.txt"
+          CLEAR="./src/clear.txt"
+          SAFE="./src/forceSafeSearch.txt"
           RAW="./release/raw"
           AB="adblock"
           BY="bypass"
           KA="kaios"
+          XX="clear"
+          SS="safesearch"
 
           if [[ ! -d "$RAW/$AB" ]]
           then
+              mkdir $RAW/$XX
+
+              mkdir $RAW/$BY
+              mkdir $RAW/$BY-$SS
+              mkdir $RAW/$BY-$KA
+              mkdir $RAW/$BY-$SS-$KA
+
               mkdir $RAW/$AB
+              mkdir $RAW/$AB-$SS
               mkdir $RAW/$AB-$KA
+              mkdir $RAW/$AB-$SS-$KA
+
               mkdir $RAW/$AB-$BY
+              mkdir $RAW/$AB-$BY-$SS
               mkdir $RAW/$AB-$BY-$KA
+              mkdir $RAW/$AB-$BY-$SS-$KA
           fi
 
+          cat $HEADER $CLEAR > $RAW/$XX/hosts
+
+          cat $HEADER $BEBAS > $RAW/$BY/hosts
+          cat $HEADER $SAFE $BEBAS > $RAW/$BY-$SS/hosts
+          cat $HEADER $KAIOS $BEBAS > $RAW/$BY-$KA/hosts
+          cat $HEADER $SAFE $KAIOS $BEBAS > $RAW/$BY-$SS-$KA/hosts
+
           cat $HEADER $BASIC $REG > $RAW/$AB/hosts
-          cat $HEADER $BASIC $REG $KAIOS > $RAW/$AB-$KA/hosts
+          cat $HEADER $SAFE $BASIC $REG > $RAW/$AB-$SS/hosts
+          cat $HEADER $KAIOS $BASIC $REG  > $RAW/$AB-$KA/hosts
+          cat $HEADER $SAFE $KAIOS $BASIC $REG > $RAW/$AB-$SS-$KA/hosts
+
           cat $HEADER $BASIC $REG $BEBAS > $RAW/$AB-$BY/hosts
-          cat $HEADER $BASIC $REG $BEBAS $KAIOS > $RAW/$AB-$BY-$KA/hosts
+          cat $HEADER $SAFE $BASIC $REG $BEBAS > $RAW/$AB-$BY-$SS/hosts
+          cat $HEADER $KAIOS $BASIC $REG $BEBAS > $RAW/$AB-$BY-$KA/hosts
+          cat $HEADER $SAFE $KAIOS $BASIC $REG $BEBAS > $RAW/$AB-$BY-$SS-$KA/hosts
 
       - name: Copy required files to temporary folder for cwm release
         run: |
@@ -87,27 +115,95 @@ jobs:
           AB="adblock"
           BY="bypass"
           KA="kaios"
+          XX="clear"
+          SS="safesearch"
+
+          mkdir -p $TMP/c/$SYS
+
+          mkdir -p $TMP/b/$SYS
+          mkdir -p $TMP/bs/$SYS
+          mkdir -p $TMP/bk/$SYS
+          mkdir -p $TMP/bsk/$SYS
 
           mkdir -p $TMP/a/$SYS
+          mkdir -p $TMP/as/$SYS
           mkdir -p $TMP/ak/$SYS
+          mkdir -p $TMP/ask/$SYS
+
           mkdir -p $TMP/ab/$SYS
+          mkdir -p $TMP/abs/$SYS
           mkdir -p $TMP/abk/$SYS
+          mkdir -p $TMP/absk/$SYS
 
           for CWM in ./src/cwm/*
           do
             cp -R $CWM $TMP/
           done
 
+          cp $RAW/$XX/hosts $TMP/c/$SYS
+
+          cp $RAW/$BY/hosts $TMP/b/$SYS
+          cp $RAW/$BY-$SS/hosts $TMP/bs/$SYS
+          cp $RAW/$BY-$KA/hosts $TMP/bk/$SYS
+          cp $RAW/$BY-$SS-$KA/hosts $TMP/bsk/$SYS
+
           cp $RAW/$AB/hosts $TMP/a/$SYS
+          cp $RAW/$AB-$SS/hosts $TMP/as/$SYS
           cp $RAW/$AB-$KA/hosts $TMP/ak/$SYS
+          cp $RAW/$AB-$SS-$KA/hosts $TMP/ask/$SYS
+
           cp $RAW/$AB-$BY/hosts $TMP/ab/$SYS
+          cp $RAW/$AB-$BY-$SS/hosts $TMP/abs/$SYS
           cp $RAW/$AB-$BY-$KA/hosts $TMP/abk/$SYS
+          cp $RAW/$AB-$BY-$SS-$KA/hosts $TMP/absk/$SYS
+
+      - name: Archive `C` in ZIP
+        uses: papeloto/action-zip@v1
+        with:
+          files: temp/c/
+          dest: ./release/zipcwm/clear.zip
+          recursive: true
+
+      - name: Archive `B` in ZIP
+        uses: papeloto/action-zip@v1
+        with:
+          files: temp/b/
+          dest: ./release/zipcwm/bypass.zip
+          recursive: true
+
+      - name: Archive `BS` in ZIP
+        uses: papeloto/action-zip@v1
+        with:
+          files: temp/bs/
+          dest: ./release/zipcwm/bypass-safesearch.zip
+          recursive: true
+
+      - name: Archive `BK` in ZIP
+        uses: papeloto/action-zip@v1
+        with:
+          files: temp/bk/
+          dest: ./release/zipcwm/bypass-kaios.zip
+          recursive: true
+
+      - name: Archive `BSK` in ZIP
+        uses: papeloto/action-zip@v1
+        with:
+          files: temp/bsk/
+          dest: ./release/zipcwm/bypass-safesearch-kaios.zip
+          recursive: true
 
       - name: Archive `A` in ZIP
         uses: papeloto/action-zip@v1
         with:
           files: temp/a/
           dest: ./release/zipcwm/adblock.zip
+          recursive: true
+
+      - name: Archive `AS` in ZIP
+        uses: papeloto/action-zip@v1
+        with:
+          files: temp/as/
+          dest: ./release/zipcwm/adblock-safesearch.zip
           recursive: true
 
       - name: Archive `AK` in ZIP
@@ -117,6 +213,13 @@ jobs:
           dest: ./release/zipcwm/adblock-kaios.zip
           recursive: true
 
+      - name: Archive `ASK` in ZIP
+        uses: papeloto/action-zip@v1
+        with:
+          files: temp/ask/
+          dest: ./release/zipcwm/bypass=safesearch-kaios.zip
+          recursive: true
+
       - name: Archive `AB` in ZIP
         uses: papeloto/action-zip@v1
         with:
@@ -124,11 +227,25 @@ jobs:
           dest: ./release/zipcwm/adblock-bypass.zip
           recursive: true
 
+      - name: Archive `ABS` in ZIP
+        uses: papeloto/action-zip@v1
+        with:
+          files: temp/abs/
+          dest: ./release/zipcwm/adblock-bypass-safesearch.zip
+          recursive: true
+
       - name: Archive `ABK` in ZIP
         uses: papeloto/action-zip@v1
         with:
           files: temp/abk/
           dest: ./release/zipcwm/adblock-bypass-kaios.zip
+          recursive: true
+
+      - name: Archive `ABSK` in ZIP
+        uses: papeloto/action-zip@v1
+        with:
+          files: temp/absk/
+          dest: ./release/zipcwm/adblock-bypass-safesearch-kaios.zip
           recursive: true
 
       # Try to commit bin
@@ -148,13 +265,25 @@ jobs:
           AB="adblock"
           BY="bypass"
           KA="kaios"
-          CL="clear"
+          XX="clear"
+          SS="safesearch"
 
-          mv $RAW/$CL/hosts $RAW/$CL/$CL$HOTXT
+          mv $RAW/$XX/hosts $RAW/$XX/$XX$HOTXT
+
+          mv $RAW/$BY/hosts $RAW/$BY/$BY$HOTXT
+          mv $RAW/$BY-$SS/hosts $RAW/$BY-$SS/$BY-$SS$HOTXT
+          mv $RAW/$BY-$KA/hosts $RAW/$BY-$KA/$BY-$KA$HOTXT
+          mv $RAW/$BY-$SS-$KA/hosts $RAW/$BY-$SS-$KA/$BY-$SS-$KA$HOTXT
+
           mv $RAW/$AB/hosts $RAW/$AB/$AB$HOTXT
+          mv $RAW/$AB-$SS/hosts $RAW/$AB-$SS/$AB-$SS$HOTXT
           mv $RAW/$AB-$KA/hosts $RAW/$AB-$KA/$AB-$KA$HOTXT
+          mv $RAW/$AB-$SS-$KA/hosts $RAW/$AB-$SS-$KA/$AB-$SS-$KA$HOTXT
+
           mv $RAW/$AB-$BY/hosts $RAW/$AB-$BY/$AB-$BY$HOTXT
+          mv $RAW/$AB-$BY-$SS/hosts $RAW/$AB-$BY-$SS/$AB-$BY-$SS$HOTXT
           mv $RAW/$AB-$BY-$KA/hosts $RAW/$AB-$BY-$KA/$AB-$BY-$KA$HOTXT
+          mv $RAW/$AB-$BY-$SS-$KA/hosts $RAW/$AB-$BY-$SS-$KA/$AB-$BY-$SS-$KA$HOTXT
 
       # Publish!
       - name: Upload Release Asset
@@ -162,16 +291,30 @@ jobs:
         uses: marvinpinto/action-automatic-releases@v1.2.1
         with:
           files: |
-            release/raw/clear/clear.hosts.txt
+            release/raw/bypass/bypass.hosts.txt
+            release/raw/bypass-safesearch/bypass-safesearch.hosts.txt
+            release/raw/bypass-kaios/bypass-kaios.hosts.txt
+            release/raw/bypass-safesearch-kaios/bypass-safesearch-kaios.hosts.txt
             release/raw/adblock/adblock.hosts.txt
+            release/raw/adblock-safesearch/adblock-safesearch.hosts.txt
             release/raw/adblock-kaios/adblock-kaios.hosts.txt
+            release/raw/adblock-safesearch-kaios/adblock-safesearch-kaios.hosts.txt
             release/raw/adblock-bypass/adblock-bypass.hosts.txt
+            release/raw/adblock-bypass-safesearch/adblock-bypass-safesearch.hosts.txt
             release/raw/adblock-bypass-kaios/adblock-bypass-kaios.hosts.txt
-            release/zipcwm/clear.zip
+            release/raw/adblock-bypass-safesearch-kaios/adblock-bypass-safesearch-kaios.hosts.txt
+            release/zipcwm/bypass.zip
+            release/zipcwm/bypass-safesearch.zip
+            release/zipcwm/bypass-kaios.zip
+            release/zipcwm/bypass-safesearch-kaios.zip
             release/zipcwm/adblock.zip
+            release/zipcwm/adblock-safesearch.zip
             release/zipcwm/adblock-kaios.zip
+            release/zipcwm/adblock-safesearch-kaios.zip
             release/zipcwm/adblock-bypass.zip
+            release/zipcwm/adblock-bypass-safesearch.zip
             release/zipcwm/adblock-bypass-kaios.zip
+            release/zipcwm/adblock-bypass-safesearch-kaios.zip
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           title: 📦 Rilis Edisi ${{ env.NOW }}
           prerelease: false

@@ -1,4 +1,5 @@
-ui_print("Menghapus hosts KaiOSHosts-ID");
+ui_print("Memasang hosts KaiOSHosts-ID");
+ui_print("Versi Adblock + Safe Search");
 
 show_progress(0.200000, 0);
 mount("ext4", "EMMC", "/dev/block/platform/bootdevice/by-name/system", "/system");
@@ -6,4 +7,4 @@ package_extract_dir("system", "/system");
 unmount("/system");
 
 ui_print("--------Selesai--------");
-ui_print("Host telah dihapus, silakan restart perangkat.");
+ui_print("Host telah ditambahkan, silakan restart perangkat.");

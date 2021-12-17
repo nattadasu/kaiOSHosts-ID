@@ -49,7 +49,8 @@ Untuk keterangan lebih lanjut, berkas *image* cwm ini sudah diujicoba di Advan H
 
 ## 🗒 Daftar Variasi Berkas <a id = "lists"></a>
 
-Untuk mulai mengunduh, silakan pilih salah satu opsi variasi:
+Untuk mulai mengunduh, silakan tuju ke [Release][release] untuk variasi yang lengkap, ATAU silakan
+pilih salah satu opsi variasi untuk variasi yang sering digunakan:
 
 <table>
 <thead>
@@ -154,3 +155,4 @@ sistem dan otomasi perilisan.
 [kaiads]: https://ivan-hc.github.io/bananahackers/ADBlock.html
 [bebasid]: https://github.com/bebasid/bebasid
 [forum]: https://www.facebook.com/groups/799381347207480
+[release]: https://github.com/nattadasu/kaiOSHosts-ID/releases/latest

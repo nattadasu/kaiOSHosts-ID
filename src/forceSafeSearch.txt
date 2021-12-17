@@ -1,0 +1,7 @@
+# [Matikan fitur SafeSearch Google dan Youtube]
+216.58.211.3 google.com
+216.58.211.3 www.google.com
+216.58.211.3 google.co.id
+216.58.211.3 www.google.co.id
+127.0.0.1 forcesafesearch.google.com
+127.0.0.1 restrict.youtube.com
