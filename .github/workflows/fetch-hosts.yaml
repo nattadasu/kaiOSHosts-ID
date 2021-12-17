@@ -70,7 +70,7 @@ jobs:
           XX="clear"
           SS="safesearch"
 
-          if [[ ! -d "$RAW/$AB" ]]
+          if [[ ! -d "$RAW/$BY" ]]
           then
               mkdir $RAW/$XX
 
