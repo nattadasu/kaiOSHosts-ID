@@ -7,6 +7,7 @@ on:
   # Schedule for action to download latest files each 7 days
   schedule:
     - cron: "0 0 * * SUN"
+  workflow_dispatch:
 
 jobs:
   fetch:
@@ -158,91 +159,91 @@ jobs:
           cp $RAW/$AB-$BY-$SS-$KA/hosts $TMP/absk/$SYS
 
       - name: Archive `C` in ZIP
-        uses: papeloto/action-zip@v1
+        uses: vimtor/action-zip@v1
         with:
           files: temp/c/
           dest: ./release/zipcwm/clear.zip
           recursive: true
 
       - name: Archive `B` in ZIP
-        uses: papeloto/action-zip@v1
+        uses: vimtor/action-zip@v1
         with:
           files: temp/b/
           dest: ./release/zipcwm/bypass.zip
           recursive: true
 
       - name: Archive `BS` in ZIP
-        uses: papeloto/action-zip@v1
+        uses: vimtor/action-zip@v1
         with:
           files: temp/bs/
           dest: ./release/zipcwm/bypass-safesearch.zip
           recursive: true
 
       - name: Archive `BK` in ZIP
-        uses: papeloto/action-zip@v1
+        uses: vimtor/action-zip@v1
         with:
           files: temp/bk/
           dest: ./release/zipcwm/bypass-kaios.zip
           recursive: true
 
       - name: Archive `BSK` in ZIP
-        uses: papeloto/action-zip@v1
+        uses: vimtor/action-zip@v1
         with:
           files: temp/bsk/
           dest: ./release/zipcwm/bypass-safesearch-kaios.zip
           recursive: true
 
       - name: Archive `A` in ZIP
-        uses: papeloto/action-zip@v1
+        uses: vimtor/action-zip@v1
         with:
           files: temp/a/
           dest: ./release/zipcwm/adblock.zip
           recursive: true
 
       - name: Archive `AS` in ZIP
-        uses: papeloto/action-zip@v1
+        uses: vimtor/action-zip@v1
         with:
           files: temp/as/
           dest: ./release/zipcwm/adblock-safesearch.zip
           recursive: true
 
       - name: Archive `AK` in ZIP
-        uses: papeloto/action-zip@v1
+        uses: vimtor/action-zip@v1
         with:
           files: temp/ak/
           dest: ./release/zipcwm/adblock-kaios.zip
           recursive: true
 
       - name: Archive `ASK` in ZIP
-        uses: papeloto/action-zip@v1
+        uses: vimtor/action-zip@v1
         with:
           files: temp/ask/
           dest: ./release/zipcwm/adblock-safesearch-kaios.zip
           recursive: true
 
       - name: Archive `AB` in ZIP
-        uses: papeloto/action-zip@v1
+        uses: vimtor/action-zip@v1
         with:
           files: temp/ab/
           dest: ./release/zipcwm/adblock-bypass.zip
           recursive: true
 
       - name: Archive `ABS` in ZIP
-        uses: papeloto/action-zip@v1
+        uses: vimtor/action-zip@v1
         with:
           files: temp/abs/
           dest: ./release/zipcwm/adblock-bypass-safesearch.zip
           recursive: true
 
       - name: Archive `ABK` in ZIP
-        uses: papeloto/action-zip@v1
+        uses: vimtor/action-zip@v1
         with:
           files: temp/abk/
           dest: ./release/zipcwm/adblock-bypass-kaios.zip
           recursive: true
 
       - name: Archive `ABSK` in ZIP
-        uses: papeloto/action-zip@v1
+        uses: vimtor/action-zip@v1
         with:
           files: temp/absk/
           dest: ./release/zipcwm/adblock-bypass-safesearch-kaios.zip
@@ -291,6 +292,7 @@ jobs:
         uses: marvinpinto/action-automatic-releases@v1.2.1
         with:
           files: |
+            release/raw/clear/clear.hosts.txt
             release/raw/bypass/bypass.hosts.txt
             release/raw/bypass-safesearch/bypass-safesearch.hosts.txt
             release/raw/bypass-kaios/bypass-kaios.hosts.txt

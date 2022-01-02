@@ -7,6 +7,7 @@ on:
   # Schedule for action to download latest files each 7 days
   schedule:
     - cron: "0 0 * * SUN"
+  workflow_dispatch:
 
 jobs:
   checkLink:
