@@ -163,29 +163,25 @@ Anda memerlukan:
 
 ### Root
 
+#### Manual
+
 1. Unduh versi `hosts` yang Anda inginkan dalam format RAW.
    * Kami menyarankan untuk mengambil versi `hosts` yang tidak ada implementasi KaiAds.
      <!-- Soalnya kagak bermanfaat kali bruh. -->
    * Pastikan kembali format berkas `hosts` bukan dokumen teks (`[VERSI].hosts.txt`).
      * Jika ada, ubah nama berkas menjadi `hosts` saja.
-     * Untuk dapat mengubah `.txt`, buka:
-       * **Windows 11**:
-         1. Tekan logo 🔎 di *taskbar* (atau tekan `Win`+`S`)
-         2. Cari "File Explorer Options".
-         3. Arahkan ke tab "*View*".
-         4. Di kolom "*Advanced Setting*," hapus centang "*Hide extensions for known file types*."
-         5. Tekan "*OK*."
-       * **Windows 8, 8.1, 10**:
-         1. Buka *File Explorer*.
-         2. Di bagian tab, ikuti:\
-            ![Sample](assets/win10.png)
-       * **Windows XP, Vista, 7**:
-         1. Buka *File Explorer*.
-         2. Ketuk tombol "*Organize*."
-         3. Arahkan ke tab "*View*".
-         4. Di kolom "*Advanced Setting*," hapus centang "*Hide extensions for known file types*."
-         5. Tekan "*OK*."
 2. Salin file `hosts` dan tempel di folder `/etc` kemudian [muat ulang](#fn2) telepon genggam.
+
+#### Otomatis menggunakan CWM
+
+1. Unduh salah satu versi berkas `hosts` dalam format ZIP CWM yang tersedia di
+   [halaman pertama](README.md).
+2. Salin berkas ke kartu memori eksternal HP.
+3. Matikan [gawai](#fn1) terlebih dahulu.
+4. Masuk ke menu `cwm`.
+5. Tuju menu "*Install zip*" > "*Choose zip from ExtraSD*" > Cari berkasnya > klik berkas dengan
+   nama varian yang telah diunduh.
+6. Tunggu proses selesai lalu kembali ke menu utama, pilih "*Reboot Phone*".
 
 ### Non-root
 
@@ -194,23 +190,8 @@ Anda memerlukan:
      <!-- Soalnya kagak bermanfaat kali bruh. -->
    * Pastikan kembali format berkas `hosts` bukan dokumen teks (`[VERSI].hosts.txt`).
      * Jika ada, ubah nama berkas menjadi `hosts` saja.
-     * Untuk dapat mengubah `.txt`, buka:
-       * **Windows 11**:
-         1. Tekan logo 🔎 di *taskbar* (atau tekan `Win`+`S`)
-         2. Cari "File Explorer Options".
-         3. Arahkan ke tab "*View*".
-         4. Di kolom "*Advanced Setting*," hapus centang "*Hide extensions for known file types*."
-         5. Tekan "*OK*."
-       * **Windows 8, 8.1, 10**:
-         1. Buka *File Explorer*.
-         2. Di bagian tab, ikuti:\
-            ![Sample](assets/win10.png)
-       * **Windows XP, Vista, 7**:
-         1. Buka *File Explorer*.
-         2. Ketuk tombol "*Organize*."
-         3. Arahkan ke tab "*View*".
-         4. Di kolom "*Advanced Setting*," hapus centang "*Hide extensions for known file types*."
-         5. Tekan "*OK*."
+     * Langkah ini tidak diwajibkan dikarenakan aplikasi yang akan disebutkan selanjutnya bisa tanpa
+       masalah mengambil data dari berkas `txt`.
 2. Install aplikasi [Hosts Go][hostsGo].
 3. Buka aplikasinya.
 4. Ketuk "Hosts Settings".
@@ -338,8 +319,8 @@ Anda memerlukan:
    * Kami menyarankan untuk mengambil versi `hosts` yang tidak ada implementasi KaiAds.
    <!-- Soalnya kagak bermanfaat kali bruh. -->
    * Versi yang tersedia:\
-     `clear`, `adblock`, `adblock-safesearch`,  `adblock-bypasss`, `adblock-bypass-safesearch`,
-     `bypass`, `bypass-safesearch`
+     `adblock`, `adblock-bypass`, `adblock-bypass-safesearch`, `adblock-safesearch`, `bypass`,
+     `bypass-safesearch`, `clear`
 4. Lakukan [muat ulang](#fn2) gawai jika diperlukan.
 
 ## 😈 BSD
@@ -361,8 +342,8 @@ Anda memerlukan:
    * Kami menyarankan untuk mengambil versi `hosts` yang tidak ada implementasi KaiAds.
    <!-- Soalnya kagak bermanfaat kali bruh. -->
    * Versi yang tersedia:\
-     `clear`, `adblock`, `adblock-safesearch`,  `adblock-bypasss`, `adblock-bypass-safesearch`,
-     `bypass`, `bypass-safesearch`
+     `adblock`, `adblock-bypass`, `adblock-bypass-safesearch`, `adblock-safesearch`, `bypass`,
+     `bypass-safesearch`, `clear`
 4. Lakukan [muat ulang](#fn2) gawai jika diperlukan.
 
 > **Catatan**:
@@ -394,8 +375,8 @@ Anda memerlukan:
    * Kami menyarankan untuk mengambil versi `hosts` yang tidak ada implementasi KaiAds.
    <!-- Soalnya kagak bermanfaat kali bruh. -->
    * Versi yang tersedia:\
-     `clear`, `adblock`, `adblock-safesearch`,  `adblock-bypasss`, `adblock-bypass-safesearch`,
-     `bypass`, `bypass-safesearch`
+     `adblock`, `adblock-bypass`, `adblock-bypass-safesearch`, `adblock-safesearch`, `bypass`,
+     `bypass-safesearch`, `clear`
 4. Lakukan [muat ulang](#fn2) gawai jika diperlukan.
 
 > **Catatan**:

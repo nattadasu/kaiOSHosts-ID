@@ -34,18 +34,24 @@ Kami memanfaatkan daftar `hosts` dari [Energized][energized] untuk *adblock* ber
 dan IPV6 dan [bebasid][bebasid] untuk *bypass* Internet Positif.
 
 Kami juga menyediakan versi terpisah untuk memblokir iklan dari [KaiAds][kaiads], **akan tetapi
-versi ini dapat merusak beberapa fitur internal, seperti mengunduh aplikasi di KaiStore atau
-memperbarui sistem**.<sup><a href="#fn1">1</a></sup> Pengguna diharapkan waspada jika ingin
-menggunakan versi ini.
+versi ini memiliki kemungkinan dapat merusak beberapa fitur internal, seperti mengunduh aplikasi di
+KaiStore atau memperbarui sistem**.<sup><a href="#fn1">1</a></sup> Beberapa aplikasi yang
+mengandalkan iklan untuk monetasi <!-- *cough cough* mocha *cough cough* --> juga diketahui tidak
+dapat berfungsi sebagaimana seharusnya. Pengguna diharapkan waspada jika ingin menggunakan versi
+ini.
 
-Untuk keterangan lebih lanjut, berkas *image* cwm ini sudah diujicoba di Advan Hape Online.
+Untuk keterangan lebih lanjut, berkas *image* cwm ini sudah diujicoba di Advan Hape Online
+menggunakan *custom rom* Digit4G, R2, dan DarkR2.
 
 > Repo ini juga dapat digunakan bagi pengguna OS lainnya seperti Windows, Linux, BSD, macOS, hingga
 > Android (diperlukan *rooting*). Silakan baca [USAGE.md](USAGE.md) untuk mengetahui lebih lanjut.
 >
-> Resiko kerusakan (seperti situs tidak dapat memuat) ditanggung oleh pengguna tersendiri. Repo ini
-> hanya mencakup pengguna KaiOS/Android yang memiliki *ClockWorkMod* (cwm) terpasang di partisi
-> *`recovery`*.
+> **Resiko kerusakan (seperti situs tidak dapat memuat dengan baik) ditanggung oleh pengguna
+> tersendiri.**
+>
+> Pengguna operator XL beserta produknya (Live.ON dan Axis) tidak akan dapat melewati (*bypass*)
+> pemblokiran dikarenakan pembaruan *firewall*. Silakan kunjungi [bebasid/bebasid#436][bebasid436]
+> untuk diskusi.
 
 ## 🗒 Daftar Variasi Berkas <a id = "lists"></a>
 
@@ -156,3 +162,4 @@ sistem dan otomasi perilisan.
 [bebasid]: https://github.com/bebasid/bebasid
 [forum]: https://www.facebook.com/groups/799381347207480
 [release]: https://github.com/nattadasu/kaiOSHosts-ID/releases/latest
+[bebasid436]: https://github.com/bebasid/bebasid/issues/436
