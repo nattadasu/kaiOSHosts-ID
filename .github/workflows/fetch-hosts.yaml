@@ -21,7 +21,7 @@ jobs:
 
       # Check if the host source links reachable
       - name: Link Checker
-        uses: lycheeverse/lychee-action@v1.2.0
+        uses: lycheeverse/lychee-action@v1.1.0
         id: lychee
         with:
           args: -v -c "config/lychee.toml" -n "config/links.txt" -b .

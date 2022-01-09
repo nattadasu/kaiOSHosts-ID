@@ -10,3 +10,6 @@ updates:
     # Check for updates once a week
     schedule:
       interval: "daily"
+    ignore:
+      - dependency-name: lycheeverse/lychee-action
+        dependency-type: all
