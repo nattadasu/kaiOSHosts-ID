@@ -36,6 +36,11 @@ jobs:
           content-filepath: ./lychee/out.md
           labels: report, automated issue, lychee
 
+      - name: Force stop if lychee error
+        if: ${{ steps.lychee.outputs.exit_code != 0 }}
+        run: |
+          exit 1
+
       # Fetch data
       - name: Download Energized (Basic) Host file
         uses: wei/wget@v1
@@ -134,26 +139,28 @@ jobs:
 
           mkdir -p $TMP
 
-          wget https://github.com/andraantariksa/hosts-validator/releases/download/v0.1/hosts-validator-linux.zip -O $TMP/validate.zip
+          wget https://github.com/andraantariksa/hosts-validator/releases/download/v0.1/hosts-validator-linux.zip 
 
-          unzip $TMP/validate.zip
+          unzip hosts-validator-linux.zip
 
-          sudo chmod +x $TMP/hosts-validator
+          sudo chmod +x ./hosts-validator
 
-          $TMP/hosts-validator $RAW/$BY/hosts
-          $TMP/hosts-validator $RAW/$BY-$SS/hosts
-          $TMP/hosts-validator $RAW/$BY-$KA/hosts
-          $TMP/hosts-validator $RAW/$BY-$SS-$KA/hosts
+          ./hosts-validator $RAW/$BY/hosts
+          ./hosts-validator $RAW/$BY-$SS/hosts
+          ./hosts-validator $RAW/$BY-$KA/hosts
+          ./hosts-validator $RAW/$BY-$SS-$KA/hosts
 
-          $TMP/hosts-validator $RAW/$AB/hosts
-          $TMP/hosts-validator $RAW/$AB-$SS/hosts
-          $TMP/hosts-validator $RAW/$AB-$KA/hosts
-          $TMP/hosts-validator $RAW/$AB-$SS-$KA/hosts
+          ./hosts-validator $RAW/$AB/hosts
+          ./hosts-validator $RAW/$AB-$SS/hosts
+          ./hosts-validator $RAW/$AB-$KA/hosts
+          ./hosts-validator $RAW/$AB-$SS-$KA/hosts
 
-          $TMP/hosts-validator $RAW/$AB-$BY/hosts
-          $TMP/hosts-validator $RAW/$AB-$BY-$SS/hosts
-          $TMP/hosts-validator $RAW/$AB-$BY-$KA/hosts
-          $TMP/hosts-validator $RAW/$AB-$BY-$SS-$KA/hosts 
+          ./hosts-validator $RAW/$AB-$BY/hosts
+          ./hosts-validator $RAW/$AB-$BY-$SS/hosts
+          ./hosts-validator $RAW/$AB-$BY-$KA/hosts
+          ./hosts-validator $RAW/$AB-$BY-$SS-$KA/hosts 
+
+          rm hosts-validator-linux.zip && rm hosts-validator
 
       - name: Copy required files to temporary folder for cwm release
         run: |
