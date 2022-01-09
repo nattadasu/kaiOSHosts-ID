@@ -19,10 +19,22 @@ jobs:
         with:
           submodules: true
 
-      - name: Wait for link check to finish
-        run: |
-          sleep 90s
-        shell: bash
+      # Check if the host source links reachable
+      - name: Link Checker
+        uses: lycheeverse/lychee-action@v1.2.0
+        id: lychee
+        with:
+          args: -v -c "config/lychee.toml" -n "config/links.txt" -b .
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+      - name: Create Issue From File
+        uses: peter-evans/create-issue-from-file@v3
+        if: ${{ steps.lychee.outputs.exit_code != 0 }}
+        with:
+          title: Link Checker Report
+          content-filepath: ./lychee/out.md
+          labels: report, automated issue, lychee
 
       # Fetch data
       - name: Download Energized (Basic) Host file
@@ -122,7 +134,7 @@ jobs:
 
           mkdir -p $TMP
 
-          wget https://github.com/andraantariksa/hosts-validator/releases/download/v0.1/hosts-validator-linux.zip -O /temp/validate.zip
+          wget https://github.com/andraantariksa/hosts-validator/releases/download/v0.1/hosts-validator-linux.zip -O $TMP/validate.zip
 
           unzip $TMP/validate.zip
 
