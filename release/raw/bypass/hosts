@@ -1441,6 +1441,8 @@
 162.159.137.6 upload.thepiratebay.org
 
 # [hitomi.la]
+185.165.169.231 hitomi.la
+185.165.169.231 www.hitomi.la
 78.142.29.56 hitomi.la
 78.142.29.56 www.hitomi.la
 23.237.55.90 hf1.hitomi.la
@@ -1451,20 +1453,23 @@
 23.237.107.210 a.hitomi.la
 23.237.54.194 aa.hitomi.la
 23.237.107.211 aa.hitomi.la
+23.237.107.210 ba.hitomi.la
 192.240.120.10 ba.hitomi.la
 23.237.54.195 ba.hitomi.la
 23.237.107.210 ca.hitomi.la
 23.237.54.194 ca.hitomi.la
 23.237.54.194 ab.hitomi.la
 23.237.107.212 ab.hitomi.la
+23.237.107.210 bb.hitomi.la
 23.237.55.90 bb.hitomi.la
 192.240.120.10 bb.hitomi.la
 23.237.54.196 bb.hitomi.la
 192.240.120.10 cb.hitomi.la
 23.237.107.210 cb.hitomi.la
 192.240.120.12 cb.hitomi.la
-66.187.70.34 streaming.hitomi.la
+23.237.54.194 streaming.hitomi.la
 23.237.107.210 streaming.hitomi.la
+66.187.70.34 streaming.hitomi.la
 192.240.120.10 tn.hitomi.la
 23.237.54.194 tn.hitomi.la
 23.237.107.210 atn.hitomi.la
@@ -11367,14 +11372,14 @@
 77.247.181.42 xxxbunker.com www.xxxbunker.com
 
 # [japaneseasmr.com]
-104.31.72.78 japaneseasmr.com
-104.31.72.78 www.japaneseasmr.com
 172.64.199.11 japaneseasmr.com
 172.64.199.11 www.japaneseasmr.com
-172.64.198.11 japaneseasmr.com
-172.64.198.11 www.japaneseasmr.com
-172.64.198.11 mail.japaneseasmr.com
+162.159.137.85 japaneseasmr.com
+162.159.137.85 www.japaneseasmr.com
+162.159.138.85 japaneseasmr.com
+162.159.138.85 www.japaneseasmr.com
 172.64.199.11 sfw.japaneseasmr.com
+162.159.137.85 mail.japaneseasmr.com
 
 # [ceporn.net]
 104.31.91.157 ceporn.net www.ceporn.net
@@ -18107,14 +18112,19 @@
 # [av01.tv]
 172.67.69.56 av01.tv
 172.67.69.56 www.av01.tv
+104.26.2.106 av01.tv
+104.26.2.106 www.av01.tv
 104.26.3.106 av01.tv
 104.26.3.106 www.av01.tv
+54.39.243.86 cdn.av01.tv
+54.39.243.91 cdn.av01.tv
 51.79.19.197 cdn.av01.tv
 149.56.240.217 cdn.av01.tv
 93.186.202.45 img1.av01.tv
 51.15.10.123 img1.av01.tv
-217.79.181.42 static.av01.tv
 51.15.10.123 static.av01.tv
+93.186.202.45 static.av01.tv
+217.79.181.42 static.av01.tv
 172.106.10.238 h-charles-cdn.av01.tv
 172.106.200.174 h-boy-cdn.av01.tv
 172.106.200.162 h-adam-cdn.av01.tv
@@ -18427,3 +18437,12 @@
 172.67.146.197 www.doujindesu.xxx
 104.21.39.166 doujindesu.xxx
 104.21.39.166 www.doujindesu.xxx
+
+# [mangaowl.net]
+172.67.71.136 mangaowl.net
+172.67.71.136 www.mangaowl.net
+104.26.15.227 mangaowl.net
+104.26.15.227 www.mangaowl.net
+172.67.71.136 img.mangaowl.net
+172.67.71.136 cdn.mangaowl.net
+104.26.6.68 i.mangaowls.com
