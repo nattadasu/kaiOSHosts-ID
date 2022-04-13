@@ -64,7 +64,7 @@ jobs:
           echo "NOW=$NOW" >>$GITHUB_ENV
 
       - name: Commit sources
-        uses: stefanzweifel/git-auto-commit-action@v4.14.0
+        uses: stefanzweifel/git-auto-commit-action@v4.14.1
         with:
           commit_message: 🍱 Memperbarui berkas hosts - Edisi ${{ env.NOW }}
           commit_options: --allow-empty
@@ -306,7 +306,7 @@ jobs:
 
       # Try to commit bin
       - name: Commit packages
-        uses: stefanzweifel/git-auto-commit-action@v4.14.0
+        uses: stefanzweifel/git-auto-commit-action@v4.14.1
         with:
           commit_message: 📦 Rilis berkas - Edisi ${{ env.NOW }}
           commit_options: --allow-empty
