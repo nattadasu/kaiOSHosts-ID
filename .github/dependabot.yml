@@ -14,3 +14,5 @@ updates:
       - dependency-name: lycheeverse/lychee-action
         versions:
           - "^1.1.0"
+    commit-message:
+      prefix: "⬆️"
