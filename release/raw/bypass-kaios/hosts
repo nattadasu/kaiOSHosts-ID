@@ -1844,30 +1844,21 @@
 23.237.54.194 dev.hitomi.la
 
 # [nhentai.net]
-104.27.195.88 nhentai.net
-104.27.195.88 www.nhentai.net
-104.21.66.123 nhentai.net
-104.21.66.123 www.nhentai.net
 172.67.159.231 nhentai.net
 172.67.159.231 www.nhentai.net
-104.27.195.88 static.nhentai.net
 172.67.159.231 static.nhentai.net
-23.237.126.122 webseed.nhentai.net
 185.177.127.78 webseed.nhentai.net
 104.27.195.88 sentry.nhentai.net
 104.27.195.88 tracker.nhentai.net
 66.6.44.4 blog.nhentai.net
-23.237.126.122 i.nhentai.net
 185.177.127.77 i.nhentai.net
 185.107.44.3 i2.nhentai.net
-23.237.126.122 i2.nhentai.net
 185.107.44.3 i3.nhentai.net
 198.255.82.50 i4.nhentai.net
 185.177.127.77 i5.nhentai.net
 185.177.127.77 i6.nhentai.net
 185.177.127.78 i7.nhentai.net
-23.237.126.122 t.nhentai.net
-185.107.44.3 t.nhentai.net
+185.177.127.77 t.nhentai.net
 198.255.82.50 t1.nhentai.net
 185.107.44.3 t2.nhentai.net
 185.107.44.3 t3.nhentai.net
@@ -12641,7 +12632,8 @@
 94.23.219.194 work.nyafuu.org
 
 # [imgur.com]
-151.101.60.193 imgur.com
+199.232.192.193 imgur.com
+199.232.192.193 www.imgur.com
 151.101.112.193 0.imgur.com
 151.101.112.193 000000.imgur.com
 151.101.112.193 kylecrane1000.imgur.com
@@ -13153,10 +13145,10 @@
 151.101.112.193 sen.imgur.com
 151.101.112.193 sentry.imgur.com
 151.101.112.193 api.imgur.com
-151.101.112.193 i.imgur.com
+151.101.184.193 i.imgur.com
 151.101.208.193 m.imgur.com
 151.101.248.193 p.imgur.com
-151.101.248.193 s.imgur.com
+199.232.76.193 s.imgur.com
 52.6.144.53 browserevents.imgur.com
 50.17.225.53 rt.imgur.com
 151.101.112.193 store.imgur.com
@@ -13164,6 +13156,11 @@
 52.6.144.53 browserevents.imgur.com
 151.101.248.193 blog.imgur.com
 104.16.51.111 help.imgur.com
+167.89.42.222 o443.mail.welcome.imgur.com
+167.89.102.75 o621.mail.msg.imgur.com
+151.101.24.193 bak.imgur.com
+151.101.40.193 backup.imgur.com
+167.89.42.224 o442.mail.notifications.imgur.com
 
 # [kissmanga.com]
 104.25.45.113 kissmanga.com
@@ -20537,10 +20534,10 @@
 172.67.204.135 live.livekoora.online
 172.67.204.135 www1.livekoora.online
 104.21.66.142 goals.livekoora.online
-142.250.70.147 test.livekoora.online
-172.67.204.135 goal.livekoora.online
+104.21.66.142 goal.livekoora.online
 104.21.66.142 livekoora.online
-216.58.194.179 ma.livekoora.online
+142.250.191.83 ar.livekoora.online
+104.21.66.142 ma.livekoora.online
 
 # [oploverz.fan]
 172.67.205.17 oploverz.fan
