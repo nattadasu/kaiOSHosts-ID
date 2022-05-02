@@ -37,6 +37,7 @@ jobs:
           labels: report, automated issue, lychee
 
       - name: Force stop if lychee error
+        uses: vishnudxb/cancel-workflow@v1.2
         if: ${{ steps.lychee.outputs.exit_code != 0 }}
         with:
           repo: nattadasu/kaiOSHosts-ID
