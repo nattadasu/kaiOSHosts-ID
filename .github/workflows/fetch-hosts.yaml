@@ -10,8 +10,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  fetch:
-    name: Fetch hosts file and then try to release
+  checkLinks:
+    name: Check links if valid
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout repo
@@ -38,9 +38,15 @@ jobs:
 
       - name: Force stop if lychee error
         if: ${{ steps.lychee.outputs.exit_code != 0 }}
-        run: |
-          exit 1
+        with:
+          repo: nattadasu/kaiOSHosts-ID
+          workflow_id: ${{ github.run_id }}
+          access_token: ${{ github.token }}
 
+  fetchSrc:
+    name: Fetch and update sources
+    runs-on: ubuntu-20.04
+    steps:
       # Fetch data
       - name: Download Energized (Basic) Host file
         uses: wei/wget@v1
