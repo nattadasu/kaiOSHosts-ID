@@ -36,18 +36,22 @@ jobs:
           content-filepath: ./lychee/out.md
           labels: report, automated issue, lychee
 
-      # - name: Force stop if lychee error
-      #   uses: vishnudxb/cancel-workflow@v1.2
-      #   if: ${{ steps.lychee.outputs.exit_code != 0 }}
-      #   with:
-      #     repo: nattadasu/kaiOSHosts-ID
-      #     workflow_id: ${{ github.run_id }}
-      #     access_token: ${{ github.token }}
+      - name: Force stop if lychee error
+        uses: vishnudxb/cancel-workflow@v1.2
+        if: ${{ steps.lychee.outputs.exit_code != 0 }}
+        with:
+          repo: nattadasu/kaiOSHosts-ID
+          workflow_id: ${{ github.run_id }}
+          access_token: ${{ github.token }}
 
   fetchSrc:
     name: Fetch and update sources
     runs-on: ubuntu-20.04
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          submodules: true
       # Fetch data
       - name: Download Energized (Basic) Host file
         uses: wei/wget@v1
