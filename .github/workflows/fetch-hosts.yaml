@@ -36,13 +36,13 @@ jobs:
           content-filepath: ./lychee/out.md
           labels: report, automated issue, lychee
 
-      - name: Force stop if lychee error
-        uses: vishnudxb/cancel-workflow@v1.2
-        if: ${{ steps.lychee.outputs.exit_code != 0 }}
-        with:
-          repo: nattadasu/kaiOSHosts-ID
-          workflow_id: ${{ github.run_id }}
-          access_token: ${{ github.token }}
+      # - name: Force stop if lychee error
+      #   uses: vishnudxb/cancel-workflow@v1.2
+      #   if: ${{ steps.lychee.outputs.exit_code != 0 }}
+      #   with:
+      #     repo: nattadasu/kaiOSHosts-ID
+      #     workflow_id: ${{ github.run_id }}
+      #     access_token: ${{ github.token }}
 
   fetchSrc:
     name: Fetch and update sources
