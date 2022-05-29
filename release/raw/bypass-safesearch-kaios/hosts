@@ -843,8 +843,8 @@
 151.101.129.140 blog.reddit.com
 151.101.129.140 4x.reddit.com
 151.101.1.140 chat.reddit.com
-151.101.201.140 mod.reddit.com
-151.101.201.140 accounts.reddit.com
+151.101.193.140 mod.reddit.com
+151.101.193.140 accounts.reddit.com
 151.101.53.140 v.redd.it
 151.101.53.140 s.reddit.com
 151.101.53.140 external-preview.redd.it
@@ -1476,8 +1476,7 @@
 34.236.168.19 diagnostics.redditmedia.com
 151.101.193.140 styles.redditmedia.com
 151.101.13.140 styles.redditmedia.com
-3.216.253.247 oops.redditmedia.com
-52.2.61.151 oops.redditmedia.com
+54.85.174.42 oops.redditmedia.com
 54.88.69.229 events.redditmedia.com
 54.88.69.229 www.events.redditmedia.com
 52.45.120.237 events.redditmedia.com
@@ -2381,11 +2380,13 @@
 
 # [gelbooru.com]
 67.202.114.141 gelbooru.com
-67.202.114.141 www.gelbooru.com
-104.21.233.236 img1.gelbooru.com
-104.21.233.236 img2.gelbooru.com
-104.21.233.236 thumbs.gelbooru.com
-104.21.233.235 img3.gelbooru.com
+188.114.97.10 www.gelbooru.com
+188.114.97.10 img1.gelbooru.com
+67.202.114.141 img1b.gelbooru.com
+172.107.228.194 img3.gelbooru.com
+172.107.228.194 video-cdn3.gelbooru.com
+67.202.114.141 webm.gelbooru.com
+188.114.97.10 ja.gelbooru.com
 
 # [omegle.com]
 104.23.142.25 omegle.com
@@ -9235,7 +9236,7 @@
 89.233.106.186 webm.rule34.xxx
 209.58.190.226 hkwebm.rule34.xxx
 23.227.197.18 uswebm.rule34.xxx
-190.2.148.183 wwebm.rule34.xxx
+89.233.106.186 wwebm.rule34.xxx
 172.67.68.251 us.rule34.xxx
 5.178.68.126 dev.rule34.xxx
 104.26.1.234 www.rule34.xxx
@@ -21040,3 +21041,29 @@
 104.21.60.27 flyfuk.com
 104.21.60.27 www.flyfuk.com
 51.89.192.48 cdn1.flyfuk.com
+
+# [jasmr.net]
+188.114.97.3 jasmr.net
+188.114.96.3 www.jasmr.net
+172.99.188.56 server.jasmr.net
+172.99.188.56 www.server.jasmr.net
+172.99.188.56 server2.jasmr.net
+172.99.188.56 www.server2.jasmr.net
+31.220.104.237 nightly.jasmr.net
+188.114.96.3 live.jasmr.net
+
+# [catbox.moe]
+107.160.74.131 catbox.moe
+107.160.74.131 www.catbox.moe
+107.160.74.131 qt.catbox.moe
+107.160.74.131 nofun.catbox.moe
+138.197.219.96 amqstore.catbox.moe
+159.65.77.233 status.catbox.moe
+107.160.74.132 litter.catbox.moe
+107.160.74.131 files.catbox.moe
+206.189.214.113 store.catbox.moe
+107.160.74.132 litterbox.catbox.moe
+172.107.226.66 nl.catbox.moe
+107.160.74.131 de.catbox.moe
+74.114.154.18 blog.catbox.moe
+159.65.77.233 boost.catbox.moe
