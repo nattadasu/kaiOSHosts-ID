@@ -10944,12 +10944,33 @@
 104.27.167.155 www.celebsflash.com
 
 # [erome.com]
-198.27.67.122 erome.com
-198.27.67.122 www.erome.com
-158.69.250.74 s2.erome.com
-158.69.250.91 s1.erome.com
-158.69.250.92 s4.erome.com
-158.69.251.197 s3.erome.com
+51.161.87.147 erome.com
+51.161.87.147 www.erome.com
+144.217.69.152 s201.erome.com
+104.21.235.118 t1.erome.com
+15.235.14.186 s17.erome.com
+104.21.235.118 o1.erome.com
+104.21.235.118 dev.erome.com
+51.83.2.26 s15.erome.com
+144.217.69.161 s202.erome.com
+15.235.14.189 s19.erome.com
+15.235.14.188 s18.erome.com
+51.255.82.59 s14.erome.com
+54.39.104.108 s11.erome.com
+15.235.14.187 s21.erome.com
+158.69.126.27 s13.erome.com
+15.235.14.185 s16.erome.com
+54.39.104.109 s12.erome.com
+144.217.69.187 s203.erome.com
+158.69.225.198 s3.erome.com
+15.235.14.190 s20.erome.com
+158.69.225.198 s4.erome.com
+158.69.225.198 s2.erome.com
+4.217.69.152 s102.erome.com
+158.69.225.198 s1.erome.com
+4.217.69.152 s101.erome.com
+158.69.225.198 dev.s1.erome.com
+104.21.235.118 l1.erome.com
 
 # [studiofow.com]
 104.24.109.14 studiofow.com
@@ -21036,3 +21057,30 @@
 107.160.74.131 de.catbox.moe
 74.114.154.18 blog.catbox.moe
 159.65.77.233 boost.catbox.moe
+
+# [supervideo.tv]
+172.67.197.242 supervideo.tv
+104.21.21.104 www.supervideo.tv
+172.67.197.242 media.supervideo.tv
+104.21.21.104 cdn.supervideo.tv
+172.67.197.242 qceug.supervideo.tv
+
+# [bigasiantube.com]
+108.59.4.25 bigasiantube.com
+108.59.4.25 www.bigasiantube.com
+108.59.4.25 ns1.bigasiantube.com
+108.59.4.25 ns2.bigasiantube.com
+108.59.4.25 mail.bigasiantube.com
+
+# [buzzav.com]
+104.26.3.91 buzzav.com
+172.67.72.16 www.buzzav.com
+104.26.3.91 cdn.buzzav.com
+172.67.72.16 cdn1.buzzav.com
+
+# [pornharbour.net]
+104.21.26.53 pornharbour.net
+172.67.135.104 www.pornharbour.net
+172.67.135.104 pics.pornharbour.net
+213.174.151.151 dc-f42931217ec0.pornharbour.net
+88.208.36.36 dc-7ea1cce58abf.pornharbour.net
